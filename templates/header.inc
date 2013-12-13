@@ -7,6 +7,7 @@
  *   $TITLE     = "Awesome Website"; // Page title
  *   $SUBDOMAIN = "people"; // Subdomain/Project
  *   $LINKS     = array(
+ *   $HEAD_RAND = ""; // Random extra values needed for in <head>
  *                  array("href" => "/link.php", "text" => "Link text")
  *                ); // Menu menu links
  *   $CSS       = array("//example.com/external.css", "/shared/styles/local.js");
@@ -15,6 +16,7 @@
  *                  "action"      => "/search.php",
  *                  "placeholder" => "Placeholder text",
  *                  "name"        => "input-name",
+ *                  "hidden"      => array(array("name" => "hidden-input-name", "value" => "hidden-input-value")),
  *                ); // Search box, if any
  */
 ?>
@@ -34,6 +36,7 @@
 
   <link href="//fonts.googleapis.com/css?family=Source+Sans+Pro:400,600,400italic,600italic|Source+Code+Pro&subset=latin,latin-ext" rel="stylesheet" type="text/css">
   <link rel="shortcut icon" href="//php.net/favicon.ico">
+  <?=$HEAD_RAND?>
 </head>
 <body id="<?=$SUBDOMAIN?>">
 
@@ -53,6 +56,9 @@
     <div class="secondscreen">
       <form method="<?=$SEARCH["method"]?>" action="<?=$SEARCH["action"]?>">
         <input type="search" placeholder="<?=$SEARCH["placeholder"]?>" name="<?=$SEARCH["name"]?>" class="search">
+<?php if(isset($SEARCH["hidden"])) foreach((array)$SEARCH["hidden"] as $entry): ?>
+        <input type="hidden" name="<?=$entry["name"]?>" value="<?=$entry["value"]?>">
+<?php endforeach ?>
       </form>
     </div>
 <?php endif ?>
