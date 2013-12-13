@@ -32,7 +32,7 @@
   <link type="text/css" media="all" rel="stylesheet" href="<?=$style?>">
 <?php endforeach ?>
 
-  <link href="http://fonts.googleapis.com/css?family=Source+Sans+Pro:400,600,400italic,600italic|Source+Code+Pro&subset=latin,latin-ext" rel="stylesheet" type="text/css">
+  <link href="//fonts.googleapis.com/css?family=Source+Sans+Pro:400,600,400italic,600italic|Source+Code+Pro&subset=latin,latin-ext" rel="stylesheet" type="text/css">
   <link rel="shortcut icon" href="//php.net/favicon.ico">
 </head>
 <body id="<?=$SUBDOMAIN?>">
