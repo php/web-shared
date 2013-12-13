@@ -51,7 +51,7 @@ isset($SEARCH)    || $SEARCH    = array();
   <input type="checkbox" id="mainmenu-toggle">
   <nav class="fullscreen">
     <div class="mainscreen">
-      <a href="/" class="home"><img src="//php.net/images/logo.php?<?=$SUBDOMAIN?>" width="48" height="24" alt="php"><span class="subdomain"><?=$SUBDOMAIN?></span></a>
+      <a href="/" class="home"><img src="//php.net/images/logo.php?<?=$SUBDOMAIN?>" width="72" height="36" alt="php"><span class="subdomain"><?=$SUBDOMAIN?></span></a>
       <ul>
 <?php foreach($LINKS as $link): ?>
         <li><a href="<?=$link["href"]?>"><?=$link["text"]?></a></li>
