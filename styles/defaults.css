@@ -85,7 +85,7 @@ nav input {
   line-height: 1.5;
 }
 /* Pad the #fragment below the header */
-section *[id] {
+section *[id]:not(input){
   margin-top: -50px;
   padding-top: 50px;
 }
