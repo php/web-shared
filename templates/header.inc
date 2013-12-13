@@ -9,6 +9,7 @@
  *   $LINKS     = array(
  *                  array("href" => "/link.php", "text" => "Link text")
  *                ); // Menu menu links
+ *   $CSS       = array("//example.com/external.css", "/shared/styles/local.js");
  *   $SEARCH    = array(
  *                  "method"      => "get",
  *                  "action"      => "/search.php",
@@ -26,6 +27,11 @@
 
   <title>PHP: <?=$TITLE ?></title>
   <link type="text/css" media="all" rel="stylesheet" href="/shared/styles/defaults.css">
+
+<?php foreach($CSS as $style): ?>
+  <link type="text/css" media="all" rel="stylesheet" href="<?=$style?>">
+<?php endforeach ?>
+
   <link href="http://fonts.googleapis.com/css?family=Source+Sans+Pro:400,600,400italic,600italic|Source+Code+Pro&subset=latin,latin-ext" rel="stylesheet" type="text/css">
   <link rel="shortcut icon" href="//php.net/favicon.ico">
 </head>

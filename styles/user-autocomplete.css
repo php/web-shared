@@ -1,0 +1,32 @@
+/* Used for username/fullname search autocomplete/suggest */
+/* {{{ Stolen from http://www.devbridge.com/projects/autocomplete/jquery/ */
+.autocomplete-w1 {
+  background: url(images/shadow.png) no-repeat bottom right;
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  margin: 6px 0 0 6px;
+  z-index: 1;
+}
+.autocomplete {
+  border: 1px solid #999;
+  background: #FFF;
+  cursor: default;
+  text-align: left;
+  max-height: 270px;
+  overflow: auto;
+  margin: -6px 6px 6px -6px;
+}
+.autocomplete .selected {
+  background:#F0F0F0;
+}
+.autocomplete div {
+  padding: 2px 5px;
+  white-space: nowrap;
+}
+.autocomplete strong {
+  font-weight: normal;
+  color: #3399FF;
+}
+
+/* }}} */
