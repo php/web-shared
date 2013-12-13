@@ -19,6 +19,12 @@
  *                  "hidden"      => array(array("name" => "hidden-input-name", "value" => "hidden-input-value")),
  *                ); // Search box, if any
  */
+isset($TITLE)     || $TITLE     = "Hypertext Preprocessor";
+isset($SUBDOMAIN) || $SUBDOMAIN = "";
+isset($LINKS)     || $LINKS     = array();
+isset($HEAD_RAND) || $HEAD_RAND = "";
+isset($CSS)       || $CSS       = array();
+isset($SEARCH)    || $SEARCH    = array();
 ?>
 <!DOCTYPE html>
 <html>

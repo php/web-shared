@@ -6,6 +6,8 @@
  *
  *   $JS = array("//example.com/external.js", "/shared/js/local.js");
  */
+
+isset($JS) || $JS = array();
 ?>
 </section><!-- .fullscreen -->
 <footer>
