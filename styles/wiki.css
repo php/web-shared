@@ -1,0 +1,939 @@
+/**
+ * This file provides styles for the general layout structure.
+ *
+ * @author Anika Henke <anika@selfthinker.org>
+ */
+body {
+  margin: 0 auto;
+}
+#dokuwiki__site {
+  margin: 0 auto;
+  max-width: 75em;
+}
+#dokuwiki__site > .site {
+  padding: 0 .5em;
+}
+#dokuwiki__header {
+  width: 100%;
+}
+#dokuwiki__header .headings {
+  float: left;
+}
+#dokuwiki__header .tools {
+  float: right;
+  text-align: right;
+}
+[dir=rtl] #dokuwiki__header .headings {
+  float: right;
+  text-align: right;
+}
+[dir=rtl] #dokuwiki__header .tools {
+  float: left;
+  text-align: left;
+}
+#dokuwiki__site .wrapper {
+  position: relative;
+}
+#dokuwiki__aside {
+  width: 16em;
+  float: left;
+  position: relative;
+  display: block;
+}
+#dokuwiki__aside > .pad {
+  margin: 0 1.5em 0 0;
+}
+[dir=rtl] #dokuwiki__aside {
+  float: right;
+}
+[dir=rtl] #dokuwiki__aside > .pad {
+  margin: 0 0 0 1.5em;
+}
+.showSidebar #dokuwiki__content {
+  float: right;
+  margin-left: -16em;
+  width: 100%;
+}
+.showSidebar #dokuwiki__content > .pad {
+  margin-left: 16em;
+}
+[dir=rtl] .showSidebar #dokuwiki__content {
+  float: left;
+  margin-left: 0;
+  margin-right: -16em;
+}
+[dir=rtl] .showSidebar #dokuwiki__content > .pad {
+  margin-left: 0;
+  margin-right: 16em;
+}
+#dokuwiki__footer {
+  clear: both;
+}
+/**
+ * This file provides styles for the TOC (table of contents), the
+ * sitemap (?do=index) and backlinks (?do=backlink).
+ */
+
+/* toc
+********************************************************************/
+
+/* toc container */
+#dw__toc {
+    float: right;
+    margin: 50px 0 0 50px;
+	border-radius: 0 0 2px 2px;
+	border-color: #C6C6E2;
+	box-shadow: inset 1px 0 1px -1px #C6C6E2, inset -1px 0 1px -1px #C6C6E2;
+	border-left: 1px solid #669;
+	border-bottom: 1px solid #669;
+	border-top: 1px solid #669;
+    background-color: #fff;
+    color: inherit;
+	padding-bottom: 0px;
+	padding-top: 0px;
+}
+[dir=rtl] #dw__toc {
+    float: left;
+    margin: 0 1.4em 1.4em 0;
+}
+a:link, a:visited {
+  color: #369;
+}
+
+#dw__toc a {
+	display: block;
+	padding: 2px 10px;
+	text-decoration: none;
+}
+
+
+/*____________ toc header ____________*/
+
+.dokuwiki h3.toggle {
+    padding: .2em .5em;
+    font-weight: bold;
+}
+
+.dokuwiki .toggle strong {
+    float: right;
+    margin: 0 .2em;
+}
+[dir=rtl] .dokuwiki .toggle strong {
+    float: left;
+}
+
+/*____________ toc list ____________*/
+
+#dw__toc > div {
+    padding: .2em .5em;
+}
+#dw__toc ul {
+    padding: 0;
+    margin: 0;
+}
+#dw__toc ul li {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    line-height: 1.1;
+}
+#dw__toc ul li div.li {
+    padding: .15em 0;
+}
+#dw__toc ul ul {
+    padding-left: 1em;
+}
+[dir=rtl] #dw__toc ul ul {
+    padding-left: 0;
+    padding-right: 1em;
+}
+#dw__toc ul ul li {
+}
+#dw__toc ul li a {
+}
+
+/* in case of toc list jumping one level
+  (e.g. if heading level 3 follows directly after heading level 1) */
+#dw__toc ul li.clear {
+}
+
+
+/* sitemap (and backlinks)
+********************************************************************/
+
+.dokuwiki ul.idx {
+    padding-left: 0;
+}
+[dir=rtl] .dokuwiki ul.idx {
+    padding-right: 0;
+}
+.dokuwiki ul.idx li {
+    list-style-image: url(../../images/bullet.png);
+}
+.dokuwiki ul.idx li.open {
+    list-style-image: url(../../images/open.png);
+}
+.dokuwiki ul.idx li.closed {
+    list-style-image: url(../../images/closed.png);
+}
+[dir=rtl] .dokuwiki ul.idx li.closed {
+    list-style-image: url(../../images/closed-rtl.png);
+}
+/**
+ * This file provides the styles for the page tools
+ * (fly out navigation beside the page to edit, etc).
+ *
+ * @author Anika Henke <anika@selfthinker.org>
+ * @author Andreas Gohr <andi@splitbrain.org>
+ */
+#dokuwiki__site > .site {
+  /* give space to the right so the tools won't disappear on smaller screens */
+  /* it's 40px because the 30px wide icons will have 5px more spacing to the left and right */
+  padding-right: 40px;
+  /* give the same space to the left to balance it out */
+  padding-left: 40px;
+}
+.dokuwiki div.page {
+  height: 190px;
+  min-height: 190px;
+  /* 30 (= height of icons) x 6 (= maximum number of possible tools) + 2x5 */
+  height: auto;
+}
+#dokuwiki__usertools {
+  /* move the tools just outside of the site */
+  right: 40px;
+}
+[dir=rtl] #dokuwiki__usertools {
+  right: auto;
+  left: 40px;
+}
+#dokuwiki__pagetools {
+  position: absolute;
+  right: -40px;
+  /* on same vertical level as first headline, because .page has 2em padding */
+  top: 2em;
+  width: 40px;
+}
+#dokuwiki__pagetools h3 {
+	display: none;
+}
+[dir=rtl] #dokuwiki__pagetools {
+  right: auto;
+  left: -40px;
+}
+#dokuwiki__pagetools div.tools {
+  position: fixed;
+  width: 40px;
+}
+#dokuwiki__pagetools ul {
+  position: absolute;
+  right: 0;
+  text-align: right;
+  margin: 0;
+  padding: 0;
+  /* add transparent border to prevent jumping when proper border is added on hover */
+  border: 1px solid transparent;
+  z-index: 10;
+}
+[dir=rtl] #dokuwiki__pagetools ul {
+  right: auto;
+  left: 0;
+  text-align: left;
+}
+#dokuwiki__pagetools ul li {
+  padding: 0;
+  margin: 0;
+  list-style: none;
+  font-size: 0.875em;
+}
+#dokuwiki__pagetools ul li a {
+  display: block;
+  min-height: 20px;
+  /* 30 - 2x5 */
+  line-height: 20px;
+  padding: 0;
+  background-position: right 0;
+  background-repeat: no-repeat;
+  /* add transparent border to prevent jumping when proper border is added on focus */
+  border: 1px solid transparent;
+  white-space: nowrap;
+  width: 30px;
+  height: 30px;
+  overflow: hidden;
+  margin-left: auto;
+  /* align right if the ul is larger because one item is focused */
+}
+#dokuwiki__pagetools ul li a:before {
+  content: url(/lib/tpl/phpnet/images/pagetools-sprite.png?v=2);
+  display: inline-block;
+  font-size: 0;
+  line-height: 0;
+}
+[dir=rtl] #dokuwiki__pagetools ul li a {
+  background-position: left 0;
+  margin-right: auto;
+  margin-left: 0;
+}
+/* show all tools on hover and individual tools on focus */
+#dokuwiki__pagetools:hover ul,
+#dokuwiki__pagetools ul li a:focus,
+#dokuwiki__pagetools ul li a:active {
+  background-color: #fff;
+  border-color: #ccc;
+  border-radius: 2px;
+  box-shadow: 2px 2px 2px #999;
+}
+#dokuwiki__pagetools:hover ul li a,
+#dokuwiki__pagetools ul li a:focus,
+#dokuwiki__pagetools ul li a:active {
+  width: auto;
+  height: auto;
+  overflow: visible;
+  padding: 5px 40px 5px 5px;
+  background-image: url(/lib/tpl/phpnet/images/pagetools-sprite.png?v=2);
+}
+#dokuwiki__pagetools:hover ul li a:before,
+#dokuwiki__pagetools ul li a:focus:before {
+  content: none;
+}
+[dir=rtl] #dokuwiki__pagetools:hover ul,
+[dir=rtl] #dokuwiki__pagetools ul li a:focus {
+  box-shadow: -2px 2px 2px #999999;
+}
+[dir=rtl] #dokuwiki__pagetools:hover li a,
+[dir=rtl] #dokuwiki__pagetools ul li a:focus,
+[dir=rtl] #dokuwiki__pagetools ul li a:active {
+  padding: 5px 5px 5px 40px;
+}
+/* IE7 fixes, doesn't work without images */
+#IE7 #dokuwiki__pagetools ul li a {
+  background-image: url(/lib/tpl/phpnet/images/pagetools-sprite.png?v=2);
+}
+#IE7 #dokuwiki__pagetools:hover ul li a span,
+#IE7 #dokuwiki__pagetools ul li a:focus span,
+#IE7 #dokuwiki__pagetools ul li a:active span {
+  clip: auto;
+  display: inline;
+  position: static;
+}
+#IE7 #dokuwiki__pagetools ul li a span {
+  clip: rect(0 0 0 0);
+  position: absolute;
+}
+#dokuwiki__pagetools ul li a:hover,
+#dokuwiki__pagetools ul li a:active,
+#dokuwiki__pagetools ul li a:focus {
+  text-decoration: none;
+}
+#dokuwiki__pagetools ul li a:hover {
+  background-color: #eee;
+}
+/*____________ all available icons in sprite ____________*/
+/**
+ * page tools without highlighting
+ *
+ * @param string @action The action class
+ * @param int @position Position in the page tools sprite
+ */
+/**
+ * page tools with highlighting
+ *
+ * @param string @action The action class
+ * @param int @position Position in the page tools sprite
+ * @param string @mode The mode in which this tool should be highlighted
+ */
+#dokuwiki__pagetools ul li a.edit {
+  background-position: right -90px;
+}
+#dokuwiki__pagetools ul li a.edit:before {
+  margin-top: -90px;
+}
+#dokuwiki__pagetools ul li a.edit:hover,
+#dokuwiki__pagetools ul li a.edit:active,
+#dokuwiki__pagetools ul li a.edit:focus {
+  background-position: right -135px;
+}
+[dir=rtl] #dokuwiki__pagetools ul li a.edit {
+  background-position: left -90px;
+}
+[dir=rtl] #dokuwiki__pagetools ul li a.edit:hover,
+[dir=rtl] #dokuwiki__pagetools ul li a.edit:active,
+[dir=rtl] #dokuwiki__pagetools ul li a.edit:focus {
+  background-position: left -135px;
+}
+#dokuwiki__pagetools ul li a.create {
+  background-position: right -180px;
+}
+#dokuwiki__pagetools ul li a.create:before {
+  margin-top: -180px;
+}
+#dokuwiki__pagetools ul li a.create:hover,
+#dokuwiki__pagetools ul li a.create:active,
+#dokuwiki__pagetools ul li a.create:focus {
+  background-position: right -225px;
+}
+[dir=rtl] #dokuwiki__pagetools ul li a.create {
+  background-position: left -180px;
+}
+[dir=rtl] #dokuwiki__pagetools ul li a.create:hover,
+[dir=rtl] #dokuwiki__pagetools ul li a.create:active,
+[dir=rtl] #dokuwiki__pagetools ul li a.create:focus {
+  background-position: left -225px;
+}
+#dokuwiki__pagetools ul li a.show {
+  background-position: right -360px;
+}
+#dokuwiki__pagetools ul li a.show:before {
+  margin-top: -360px;
+}
+#dokuwiki__pagetools ul li a.show:hover,
+#dokuwiki__pagetools ul li a.show:active,
+#dokuwiki__pagetools ul li a.show:focus {
+  background-position: right -405px;
+}
+[dir=rtl] #dokuwiki__pagetools ul li a.show {
+  background-position: left -360px;
+}
+[dir=rtl] #dokuwiki__pagetools ul li a.show:hover,
+[dir=rtl] #dokuwiki__pagetools ul li a.show:active,
+[dir=rtl] #dokuwiki__pagetools ul li a.show:focus {
+  background-position: left -405px;
+}
+#dokuwiki__pagetools ul li a.source {
+  background-position: right -450px;
+}
+#dokuwiki__pagetools ul li a.source:before {
+  margin-top: -450px;
+}
+#dokuwiki__pagetools ul li a.source:hover,
+#dokuwiki__pagetools ul li a.source:active,
+#dokuwiki__pagetools ul li a.source:focus {
+  background-position: right -495px;
+}
+[dir=rtl] #dokuwiki__pagetools ul li a.source {
+  background-position: left -450px;
+}
+[dir=rtl] #dokuwiki__pagetools ul li a.source:hover,
+[dir=rtl] #dokuwiki__pagetools ul li a.source:active,
+[dir=rtl] #dokuwiki__pagetools ul li a.source:focus {
+  background-position: left -495px;
+}
+#dokuwiki__pagetools ul li a.draft {
+  background-position: right -270px;
+}
+#dokuwiki__pagetools ul li a.draft:before {
+  margin-top: -270px;
+}
+#dokuwiki__pagetools ul li a.draft:hover,
+#dokuwiki__pagetools ul li a.draft:active,
+#dokuwiki__pagetools ul li a.draft:focus {
+  background-position: right -315px;
+}
+[dir=rtl] #dokuwiki__pagetools ul li a.draft {
+  background-position: left -270px;
+}
+[dir=rtl] #dokuwiki__pagetools ul li a.draft:hover,
+[dir=rtl] #dokuwiki__pagetools ul li a.draft:active,
+[dir=rtl] #dokuwiki__pagetools ul li a.draft:focus {
+  background-position: left -315px;
+}
+#dokuwiki__pagetools ul li a.revs {
+  background-position: right -630px;
+}
+#dokuwiki__pagetools ul li a.revs:before {
+  margin-top: -630px;
+}
+#dokuwiki__pagetools ul li a.revs:hover,
+#dokuwiki__pagetools ul li a.revs:active,
+#dokuwiki__pagetools ul li a.revs:focus {
+  background-position: right -675px;
+}
+[dir=rtl] #dokuwiki__pagetools ul li a.revs {
+  background-position: left -630px;
+}
+[dir=rtl] #dokuwiki__pagetools ul li a.revs:hover,
+[dir=rtl] #dokuwiki__pagetools ul li a.revs:active,
+[dir=rtl] #dokuwiki__pagetools ul li a.revs:focus {
+  background-position: left -675px;
+}
+.mode_revisions #dokuwiki__pagetools ul li a.revs {
+  background-position: right -675px;
+}
+.mode_revisions #dokuwiki__pagetools ul li a.revs:before {
+  margin-top: -675px;
+}
+[dir=rtl] .mode_revisions #dokuwiki__pagetools ul li a.revs {
+  background-position: left -675px;
+}
+#dokuwiki__pagetools ul li a.backlink {
+  background-position: right -720px;
+}
+#dokuwiki__pagetools ul li a.backlink:before {
+  margin-top: -720px;
+}
+#dokuwiki__pagetools ul li a.backlink:hover,
+#dokuwiki__pagetools ul li a.backlink:active,
+#dokuwiki__pagetools ul li a.backlink:focus {
+  background-position: right -765px;
+}
+[dir=rtl] #dokuwiki__pagetools ul li a.backlink {
+  background-position: left -720px;
+}
+[dir=rtl] #dokuwiki__pagetools ul li a.backlink:hover,
+[dir=rtl] #dokuwiki__pagetools ul li a.backlink:active,
+[dir=rtl] #dokuwiki__pagetools ul li a.backlink:focus {
+  background-position: left -765px;
+}
+.mode_backlink #dokuwiki__pagetools ul li a.backlink {
+  background-position: right -765px;
+}
+.mode_backlink #dokuwiki__pagetools ul li a.backlink:before {
+  margin-top: -765px;
+}
+[dir=rtl] .mode_backlink #dokuwiki__pagetools ul li a.backlink {
+  background-position: left -765px;
+}
+#dokuwiki__pagetools ul li a.top {
+  background-position: right -900px;
+}
+#dokuwiki__pagetools ul li a.top:before {
+  margin-top: -900px;
+}
+#dokuwiki__pagetools ul li a.top:hover,
+#dokuwiki__pagetools ul li a.top:active,
+#dokuwiki__pagetools ul li a.top:focus {
+  background-position: right -945px;
+}
+[dir=rtl] #dokuwiki__pagetools ul li a.top {
+  background-position: left -900px;
+}
+[dir=rtl] #dokuwiki__pagetools ul li a.top:hover,
+[dir=rtl] #dokuwiki__pagetools ul li a.top:active,
+[dir=rtl] #dokuwiki__pagetools ul li a.top:focus {
+  background-position: left -945px;
+}
+#dokuwiki__pagetools ul li a.revert {
+  background-position: right -540px;
+}
+#dokuwiki__pagetools ul li a.revert:before {
+  margin-top: -540px;
+}
+#dokuwiki__pagetools ul li a.revert:hover,
+#dokuwiki__pagetools ul li a.revert:active,
+#dokuwiki__pagetools ul li a.revert:focus {
+  background-position: right -585px;
+}
+[dir=rtl] #dokuwiki__pagetools ul li a.revert {
+  background-position: left -540px;
+}
+[dir=rtl] #dokuwiki__pagetools ul li a.revert:hover,
+[dir=rtl] #dokuwiki__pagetools ul li a.revert:active,
+[dir=rtl] #dokuwiki__pagetools ul li a.revert:focus {
+  background-position: left -585px;
+}
+.mode_revert #dokuwiki__pagetools ul li a.revert {
+  background-position: right -585px;
+}
+.mode_revert #dokuwiki__pagetools ul li a.revert:before {
+  margin-top: -585px;
+}
+[dir=rtl] .mode_revert #dokuwiki__pagetools ul li a.revert {
+  background-position: left -585px;
+}
+#dokuwiki__pagetools ul li a.subscribe {
+  background-position: right -810px;
+}
+#dokuwiki__pagetools ul li a.subscribe:before {
+  margin-top: -810px;
+}
+#dokuwiki__pagetools ul li a.subscribe:hover,
+#dokuwiki__pagetools ul li a.subscribe:active,
+#dokuwiki__pagetools ul li a.subscribe:focus {
+  background-position: right -855px;
+}
+[dir=rtl] #dokuwiki__pagetools ul li a.subscribe {
+  background-position: left -810px;
+}
+[dir=rtl] #dokuwiki__pagetools ul li a.subscribe:hover,
+[dir=rtl] #dokuwiki__pagetools ul li a.subscribe:active,
+[dir=rtl] #dokuwiki__pagetools ul li a.subscribe:focus {
+  background-position: left -855px;
+}
+.mode_subscribe #dokuwiki__pagetools ul li a.subscribe {
+  background-position: right -855px;
+}
+.mode_subscribe #dokuwiki__pagetools ul li a.subscribe:before {
+  margin-top: -855px;
+}
+[dir=rtl] .mode_subscribe #dokuwiki__pagetools ul li a.subscribe {
+  background-position: left -855px;
+}
+#dokuwiki__pagetools ul li a.mediaManager {
+  background-position: right -990px;
+}
+#dokuwiki__pagetools ul li a.mediaManager:before {
+  margin-top: -990px;
+}
+#dokuwiki__pagetools ul li a.mediaManager:hover,
+#dokuwiki__pagetools ul li a.mediaManager:active,
+#dokuwiki__pagetools ul li a.mediaManager:focus {
+  background-position: right -1035px;
+}
+[dir=rtl] #dokuwiki__pagetools ul li a.mediaManager {
+  background-position: left -990px;
+}
+[dir=rtl] #dokuwiki__pagetools ul li a.mediaManager:hover,
+[dir=rtl] #dokuwiki__pagetools ul li a.mediaManager:active,
+[dir=rtl] #dokuwiki__pagetools ul li a.mediaManager:focus {
+  background-position: left -1035px;
+}
+#dokuwiki__pagetools ul li a.back {
+  background-position: right -1080px;
+}
+#dokuwiki__pagetools ul li a.back:before {
+  margin-top: -1080px;
+}
+#dokuwiki__pagetools ul li a.back:hover,
+#dokuwiki__pagetools ul li a.back:active,
+#dokuwiki__pagetools ul li a.back:focus {
+  background-position: right -1125px;
+}
+[dir=rtl] #dokuwiki__pagetools ul li a.back {
+  background-position: left -1080px;
+}
+[dir=rtl] #dokuwiki__pagetools ul li a.back:hover,
+[dir=rtl] #dokuwiki__pagetools ul li a.back:active,
+[dir=rtl] #dokuwiki__pagetools ul li a.back:focus {
+  background-position: left -1125px;
+}
+/**
+ * This file provides styles for the Administration overview
+ * (?do=admin).
+ */
+
+.dokuwiki ul.admin_tasks {
+    float: left;
+    width: 40%;
+    list-style-type: none;
+    font-size: 1.125em;
+}
+[dir=rtl] .dokuwiki ul.admin_tasks {
+    float: right;
+}
+
+.dokuwiki ul.admin_tasks li {
+    padding-left: 35px;
+    margin: 0 0 1em 0;
+    font-weight: bold;
+    list-style-type: none;
+    background: transparent none no-repeat scroll 0 0;
+    color: inherit;
+}
+[dir=rtl] .dokuwiki ul.admin_tasks li {
+    padding-left: 0;
+    padding-right: 35px;
+    background-position: right 0;
+}
+
+.dokuwiki ul.admin_tasks li.admin_acl {
+    background-image: url(../../images/admin/acl.png);
+}
+.dokuwiki ul.admin_tasks li.admin_usermanager {
+    background-image: url(../../images/admin/usermanager.png);
+}
+.dokuwiki ul.admin_tasks li.admin_plugin {
+    background-image: url(../../images/admin/plugin.png);
+}
+.dokuwiki ul.admin_tasks li.admin_config {
+    background-image: url(../../images/admin/config.png);
+}
+.dokuwiki ul.admin_tasks li.admin_revert {
+    background-image: url(../../images/admin/revert.png);
+}
+.dokuwiki ul.admin_tasks li.admin_popularity {
+    background-image: url(../../images/admin/popularity.png);
+}
+
+/* DokuWiki version below */
+.dokuwiki #admin__version {
+    clear: left;
+    float: right;
+    color: @ini_text_neu;
+    background-color: inherit;
+}
+[dir=rtl] .dokuwiki #admin__version {
+    clear: right;
+    float: left;
+}
+/*	Cascading Style Sheet for 'code' syntax plugin  -  2007-08-31
+	Copyright (C) 2007  M.Watermann, D-10247 Berlin, FRG  -  <support@mwat.de>
+*/
+pre.code{background:#fcfdfe none;border:thin dotted #ccc;color:#000;margin:1ex 0;padding:0.4ex;line-height:1.2;overflow:auto;max-height:50em;max-width:99%;}
+.code .diff-addedline{background:#cfc none;color:#000;}
+.code .diff-blockheader{background:#ccf none;color:#000;}
+.code .diff-deletedline{background:#fcc none;color:#000;}
+.code .br0{background-color:inherit;color:#369;}
+.code .co1,.code .co2,.code .coMULTI,.code .kw2,.code .lno{font-style:italic;}
+.code .br0,.code .co2,.code .es0,.code .kw1,.code .kw2,.code .kw3{font-weight:600;}
+.code .co1,.code .co2,.code .coMULTI{background-color:inherit;color:#666;}
+.code .es0{background-color:inherit;color:#c09;}
+.code .imp{background-color:inherit;color:#909;}
+.code .kw1{background-color:inherit;color:#903;}
+.code .kw2{background-color:inherit;color:#036;}
+.code .kw3{background-color:inherit;color:#309;}
+.code .kw4{background-color:inherit;color:#933;}
+.code .kw5{background-color:inherit;color:#00f;}
+.code .lno{background-color:inherit;color:#999;font-size:smaller;}
+.code .me0{background-color:inherit;color:#060;}
+.code .nu0{background-color:inherit;color:#939;}
+.code .re0{background-color:inherit;color:#606;}
+.code .re1{background-color:inherit;color:#660;}
+.code .re2{background-color:inherit;color:#063;}
+.code .re3{background-color:inherit;color:#963;font-style:italic;font-weight:400;}
+.code .re4{background-color:inherit;color:#099;}
+.code .sc0{background-color:inherit;color:#069;}
+.code .sc1{background-color:inherit;color:#960;}
+.code .sc2{background-color:inherit;color:#090;}
+.code .st0{background-color:inherit;color:#900;}
+.code .sy0{background-color:inherit;color:#6c6;}
+div.code{margin:0.4ex 0;padding:0.4ex 0;}
+div.code pre.code{margin:0;}
+div.code p.codehead,div.code p.codefoot{color:#030;background-color:inherit;line-height:1.3;text-align:left;padding:0 0 0 1ex;}
+div.code p.codehead{margin:0.6ex 0 0 0;text-decoration:underline;}
+div.code p.codefoot{margin:0 0 0.6ex 0;text-decoration:underline;}
+div.code p.codeHidden{background-image:url(img/plus-11x11.gif);}
+div.code p.codeShown{background-image:url(img/minus-11x11.gif);}
+div.code p.codeHidden,div.code p.codeShown{padding-left:13px;background-repeat:no-repeat;background-position:0 50%;cursor:pointer;}
+div.code p.codeHidden:hover,div.code p.codeShown:hover{background-color:#ddffdd;color:#030;text-decoration:none;}
+div.code pre.codeHidden{display:none;}
+div.code pre.codeShown{display:block;}
+/*	$Id$
+	Cascading Style Sheet for CODE syntax plugin
+	Copyright (C) 2006, 2007  M.Watermann, D-10247 Berlin, FRG
+	EMail : <support@mwat.de>
+
+	--- using only web-safe colours ---
+
+	NOTE:
+		This file is _not_ used by DokuWiki!
+		It is provided for informational purposes only.
+		If you want to change the styling rules either change the settings
+		in the file "style.css" or rename this file to "style.css".
+*/
+
+/*	The main preformatted block containing the hilighted code */
+pre.code {
+	background:	#fcfdfe none;
+	border:		thin dotted #ccc;
+	color:		#000;
+	margin:		1ex 0;
+	padding:	0.4ex;
+	line-height:1.2;
+	overflow:	auto;
+	max-height:	50em;
+	max-width:	99%;
+}
+
+/*	The various code parts /
+
+/*	DIFF (patch file) hilighting
+	(Note: This are the same classnames as used with the DIFF syntax plugin.)
+*/
+.code .diff-addedline {
+	background:	#cfc none;
+	color:		#000;
+}
+.code .diff-blockheader {
+	background:	#ccf none;
+	color:		#000;
+}
+.code .diff-deletedline {
+	background:	#fcc none;
+	color:		#000;
+}
+
+/* Other code fragments */
+.code .br0 {
+	background-color:	inherit;
+	color:	#369;
+}
+.code .co1,
+.code .co2,
+.code .coMULTI,
+.code .kw2,
+.code .lno {
+	font-style:	italic;
+}
+.code .br0,
+.code .co2,
+.code .es0,
+.code .kw1,
+.code .kw2,
+.code .kw3 {
+	font-weight:	600;
+}
+.code .co1,
+.code .co2,
+.code .coMULTI {
+	background-color:	inherit;
+	color:		#666;
+}
+.code .es0 {
+	background-color:	inherit;
+	color:		#c09;
+}
+.code .imp {
+	background-color:	inherit;
+	color:		#909;
+}
+.code .kw1 {
+	background-color:	inherit;
+	color:		#903;
+}
+.code .kw2 {
+	background-color:	inherit;
+	color:		#036;
+}
+.code .kw3 {
+	background-color:	inherit;
+	color:		#309;
+}
+.code .kw4 {
+	background-color:	inherit;
+	color:		#933;
+}
+.code .kw5 {
+	background-color:	inherit;
+	color:		#00f;
+}
+.code .lno {
+	background-color:	inherit;
+	color:		#999;
+	font-size:	smaller;
+}
+.code .me0 {
+	background-color:	inherit;
+	color:		#060;
+}
+.code .nu0 {
+	background-color:	inherit;
+	color:		#939;
+}
+.code .re0 {
+	background-color:	inherit;
+	color:		#606;
+}
+.code .re1 {
+	background-color:	inherit;
+	color:		#660;
+}
+.code .re2 {
+	background-color:	inherit;
+	color:		#063;
+}
+.code .re3 {
+	background-color:	inherit;
+	color:			#963;
+	font-style:		italic;
+	font-weight:	400;
+}
+.code .re4 {
+	background-color:	inherit;
+	color:		#099;
+}
+.code .sc0 {
+	background-color:	inherit;
+	color:		#069;
+}
+.code .sc1 {
+	background-color:	inherit;
+	color:		#960;
+}
+.code .sc2 {
+	background-color:	inherit;
+	color:		#090;
+}
+.code .st0 {
+	background-color:	inherit;
+	color:		#900;
+}
+.code .sy0 {
+	background-color:	inherit;
+	color:		#6c6;
+}
+
+/*	Footer/header related settings.
+ */
+div.code {
+	margin:		0.4ex 0;	/* We use both to support even ... */
+	padding:	0.4ex 0;	/* ... broken browsers like M$IE. */
+}
+div.code pre.code {
+	margin:		0;	/* PRE inside DIV doesn't need a margin */
+}
+div.code p.codehead,
+div.code p.codefoot {
+	color:		#030;
+	background-color:	inherit;
+	line-height:	1.3;
+	text-align:	left;
+	padding:	0 0 0 1ex;
+}
+div.code p.codehead {
+	margin:		0.6ex 0 0 0;
+	text-decoration:	underline;
+}
+div.code p.codefoot {
+	margin:		0 0 0.6ex 0;
+	text-decoration:	underline;
+}
+
+
+/*	Classes to toggle visibility.
+	The following settings are used only via JavaScript.
+*/
+
+/* Graphical indicators for toggleable elements*/
+div.code p.codeHidden {
+	background-image:	url(img/plus-11x11.gif);
+}
+div.code p.codeShown {
+	background-image:	url(img/minus-11x11.gif);
+}
+div.code p.codeHidden,
+div.code p.codeShown {
+	padding-left:	13px;
+	background-repeat:	no-repeat;
+	background-position: 0 50%;	/* left middle */
+	cursor:		pointer;
+}
+
+
+/* Graphical feedback to indicate the clickable elements */
+div.code p.codeHidden:hover,
+div.code p.codeShown:hover {
+	background-color:	#ddffdd;
+	color:		#030;
+	text-decoration:	none;
+}
+
+div.code pre.codeHidden {
+	display:	none;
+}
+div.code pre.codeShown {
+	display:	block;
+}
+
+
+/*	An alternative to switching ON/OFF the whole block
+	could be to set the max-height property, e.g.:
+
+div.code pre.codeHidden {
+	max-height:	3em;
+}
+div.code pre.codeShown {
+	max-height:	50em;
+}
+*/
+
+/* _EoF_ */
