@@ -23,8 +23,9 @@
 body {
   color: #444 !important;
   font: normal 1em Tahoma, Arial, sans-serif, serif, monospace;
-  background-color: #fff;
+  background-color: #E3E3F1;
   height: 100%;
+  font-size: 1em;
 }
 header {
   top: 0px;
@@ -81,6 +82,38 @@ nav input {
   border-radius: 2px;
   box-shadow: inset 0 1px 2px rgba(0,0,0,.2);
 }
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: "Source Sans Pro", Helvetica, Arial, sans-serif;
+  font-weight: bolder;
+  color: #446;
+  background: #E3E3F1;
+  border-radius: 0 0 2px 2px;
+  border-color: #C6C6E2;
+  box-shadow: inset 1px 0 1px -1px #C6C6E2, inset -1px 0 1px -1px #C6C6E2;
+  padding: 0.333333333em 0.444444444em;
+  border-top: 2px solid #669;
+  border-bottom: 1px solid;
+}
+h1 {
+    font-size: 1.25em;
+    line-height: 1;
+    margin:0 0 .5em;
+}
+h2 {
+    font-size: 1.20em;
+    line-height: 1.2;
+    margin:0 0 0.6em;
+}
+h3 {
+    font-size: 1.125em;
+    line-height: 1.333333333;
+    margin:0 0 0.66666666666667em;
+}
+p {
+    margin: .75em 0;
+}
+
 /* Pad the #fragment below the header */
 section *[id]:not(input){
   margin-top: -50px;
@@ -90,6 +123,8 @@ section.fullscreen {
   /* Force the content below the fixed header */
   display: block;
   height: 100%;
+  background: #fff;
+  padding: 1.5em;
 }
 .secondscreen {
   vertical-align: top;
