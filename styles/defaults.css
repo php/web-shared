@@ -84,31 +84,32 @@ nav input {
 }
 
 h1, h2, h3, h4, h5, h6 {
-  font-family: "Source Sans Pro", Helvetica, Arial, sans-serif;
+  font-family: "Source Sans Pro", Helvetica, Arial, sans-serif !important;
   font-weight: bolder;
   color: #446;
   background: #E3E3F1;
   border-radius: 0 0 2px 2px;
   border-color: #C6C6E2;
   box-shadow: inset 1px 0 1px -1px #C6C6E2, inset -1px 0 1px -1px #C6C6E2;
-  padding: 0.333333333em 0.444444444em;
+  padding: 0.333333333em 0.444444444em !important;
+  margin-top: 0.333333333em !important;
   border-top: 2px solid #669;
   border-bottom: 1px solid;
 }
 h1 {
     font-size: 1.25em;
     line-height: 1;
-    margin:0 0 .5em;
+    margin:0 0 .5em !important;
 }
 h2 {
     font-size: 1.20em;
     line-height: 1.2;
-    margin:0 0 0.6em;
+    margin:0 0 0.6em !important;
 }
 h3 {
     font-size: 1.125em;
     line-height: 1.333333333;
-    margin:0 0 0.66666666666667em;
+    margin:0 0 0.66666666666667em !important;
 }
 p {
     margin: .75em 0;
