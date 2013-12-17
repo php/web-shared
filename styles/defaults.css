@@ -97,22 +97,22 @@ h1, h2, h3, h4, h5, h6 {
   border-bottom: 1px solid;
 }
 h1 {
-    font-size: 1.25em;
-    line-height: 1;
-    margin:0 0 .5em !important;
+  font-size: 1.25em;
+  line-height: 1;
+  margin:0 0 .5em !important;
 }
 h2 {
-    font-size: 1.20em;
-    line-height: 1.2;
-    margin:0 0 0.6em !important;
+  font-size: 1.20em;
+  line-height: 1.2;
+  margin:0 0 0.6em !important;
 }
 h3 {
-    font-size: 1.125em;
-    line-height: 1.333333333;
-    margin:0 0 0.66666666666667em !important;
+  font-size: 1.125em;
+  line-height: 1.333333333;
+  margin:0 0 0.66666666666667em !important;
 }
 p {
-    margin: .75em 0;
+  margin: .75em 0;
 }
 
 /* Pad the #fragment below the header */
@@ -177,7 +177,7 @@ body {
   margin: 50px 0 0 0;
 }
 #mainmenu-toggle-overlay, #mainmenu-toggle {
-    display: none;
+  display: none;
 }
 #mainmenu-toggle:checked + nav {
   /* This just has to be big enough to cover whatever's in nav. */
