@@ -1,0 +1,12 @@
+header {
+  border-bottom: 0.25em solid #ff9900;
+  background-color: #ffcc66;
+}
+footer {
+  border-top: .25em solid #ff9900;
+}
+h1, h2, h3, h4, h5, h6 {
+	border-top-color: #ff9900;
+	border-bottom-color: #ffcc66;
+}
+
