@@ -3,6 +3,10 @@
  *
  * @author Anika Henke <anika@selfthinker.org>
  */
+.editbutton_section
+{
+	display: none;
+}
 body {
   margin: 0 auto;
 }
