@@ -87,9 +87,6 @@ a:link, a:visited {
 	padding: 2px 10px;
 	text-decoration: none;
 }
-#dw__toc {
-	margin-top: 40px;
-}
 
 
 /*____________ toc header ____________*/
@@ -171,13 +168,6 @@ a:link, a:visited {
  * @author Anika Henke <anika@selfthinker.org>
  * @author Andreas Gohr <andi@splitbrain.org>
  */
-#dokuwiki__site > .site {
-  /* give space to the right so the tools won't disappear on smaller screens */
-  /* it's 40px because the 30px wide icons will have 5px more spacing to the left and right */
-  padding-right: 40px;
-  /* give the same space to the left to balance it out */
-  padding-left: 40px;
-}
 .dokuwiki div.page {
   height: 190px;
   min-height: 190px;
