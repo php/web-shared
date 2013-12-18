@@ -192,30 +192,28 @@ section.mainscreen {
   }
   header nav {
     max-height: 0;
+    overflow-x: hidden;
   }
   nav {
-    overflow: auto;
+    overflow-y: auto;
     clear: both;
   }
   nav ul, nav li, nav a {
     display: block;
     text-align: center;
   }
-  .home {
+  a.home {
     position: absolute;
     top: 0;
   }
   .fullscreen,
   .mainscreen,
   .secondscreen {
-    display: block;
     width: 100%;
+    display: block;
   }
   section.fullscreen {
     top: 50px;
-  }
-  body {
-    margin: 0;
   }
   footer {
     max-height: 0;
@@ -225,9 +223,6 @@ section.mainscreen {
   }
 }
 @media (min-width: 641px) {
-  .fullscreen {
-    width: 100%;
-  }
   .fullscreen,
   .mainscreen,
   .secondscreen {
@@ -236,6 +231,9 @@ section.mainscreen {
   }
   section.fullscreen {
     top: 85px;
+  }
+  section.secondscreen {
+    margin-bottom: 75px;
   }
   header, footer, section.fullscreen {
     padding: 0 10%;
@@ -247,32 +245,37 @@ section.mainscreen {
 
 @media (min-width: 1020px) {
   .fullscreen {
+    width: 100%;
     display: block;
-    width: 90%;
   }
   section.fullscreen {
     top: 45px;
-    margin-bottom: 50px;
+  }
+  section.mainscreen {
+    margin-bottom: 75px;
   }
   header, footer, section.fullscreen {
-    padding: 0 75px;
+    padding: 0 10px;
   }
   .mainscreen {
     width: 65%;
     display: inline-block;
-  }
-  .mainscreen {
     padding: 0;
+    padding: 0 35px 0 0;
   }
   .secondscreen {
     width: 300px;
   }
 }
 @media (min-width: 1250px) {
+  header, footer, section.fullscreen {
+    padding: 0 40px;
+  }
   .fullscreen {
-    width: 90%;
+    width: 100%;
   }
   .mainscreen {
+    width: 65%;
     padding: 0 40px;
   }
 }
