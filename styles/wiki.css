@@ -3,10 +3,6 @@
  *
  * @author Anika Henke <anika@selfthinker.org>
  */
-.editbutton_section
-{
-	display: none;
-}
 body {
   margin: 0 auto;
 }
@@ -190,7 +186,7 @@ a:link, a:visited {
   position: absolute;
   right: -40px;
   /* on same vertical level as first headline, because .page has 2em padding */
-  top: 3em;
+  top: 0;
   width: 40px;
 }
 #dokuwiki__pagetools h3 {
@@ -916,3 +912,15 @@ div.code pre.codeShown {
 */
 
 /* _EoF_ */
+
+/* Random php.net mods */
+
+.editbutton_section
+{
+	display: none;
+}
+@media (max-width:640px) {
+	#dokuwiki__pagetools ul {
+		display: hidden;
+	}
+}
