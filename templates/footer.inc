@@ -9,6 +9,7 @@
 
 isset($JS) || $JS = array();
 ?>
+</section><!-- .padder -->
 </section><!-- .fullscreen -->
 <footer>
   <nav class="fullscreen">

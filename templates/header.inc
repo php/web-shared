@@ -70,6 +70,7 @@ isset($SEARCH)    || $SEARCH    = array();
   </nav>
 </header>
 
+<section id="padder">
 <section class="fullscreen">
 
 
