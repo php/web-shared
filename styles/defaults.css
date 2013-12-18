@@ -26,7 +26,6 @@ body {
   background-color: #E3E3F1;
   height: 100%;
   width: 100%;
-  font-size: 1em;
   height: 100%;
   position: fixed;
   margin: 0 !important;
@@ -126,31 +125,23 @@ p {
   margin: .75em 0;
 }
 
-#padder {
+section.fullscreen {
   position: fixed;
   height: 100%;
   overflow-y: scroll;
-}
-/* Pad the #fragment below the header */
-section.fullscreen {
-  /* Force the content below the fixed header */
   display: block;
-  background: #fff;
   padding-bottom: 50px;
+
+}
+section.mainscreen {
+  background: #fff;
+  border: 1px solid #ccc;
+  border-top: 0px;
+  border-bottom: 0px;
 }
 .secondscreen {
   vertical-align: top;
   display: inline-block;
-}
-.secondscreen .panel {
-  background: #f0f0f0;
-  border: 1px solid #e3e3e3;
-  border-radius: 2px;
-}
-.secondscreen a {
-  color: #333;
-  display: block;
-  padding: .75em 1em;
 }
 
 /* Grab attention with a warning */
@@ -214,19 +205,17 @@ section.fullscreen {
     position: absolute;
     top: 0;
   }
-  #padder,
   .fullscreen,
   .mainscreen,
   .secondscreen {
     display: block;
     width: 100%;
   }
-  #padder {
+  section.fullscreen {
     top: 50px;
   }
   body {
     margin: 0;
-    background-color: #fff;
   }
   footer {
     max-height: 0;
@@ -236,7 +225,7 @@ section.fullscreen {
   }
 }
 @media (min-width: 641px) {
-  #padder {
+  .fullscreen {
     width: 100%;
   }
   .fullscreen,
@@ -245,10 +234,10 @@ section.fullscreen {
     width: 90%;
     display: inline-block;
   }
-  #padder {
+  section.fullscreen {
     top: 85px;
   }
-  header, footer, #padder {
+  header, footer, section.fullscreen {
     padding: 0 10%;
   }
   img {
@@ -257,33 +246,26 @@ section.fullscreen {
 }
 
 @media (min-width: 1020px) {
-  #padder,
   .fullscreen {
     display: block;
+    width: 90%;
   }
-  .fullscreen {
-    width: 85%;
-  }
-  #padder {
+  section.fullscreen {
     top: 45px;
-    width: 100%;
-    background-color: #E3E3F1;
-  }
-  #padder .fullscreen {
     margin-bottom: 50px;
   }
-  header, footer, #padder {
+  header, footer, section.fullscreen {
     padding: 0 75px;
   }
   .mainscreen {
-    width: 70%;
+    width: 65%;
     display: inline-block;
   }
   .mainscreen {
     padding: 0;
   }
   .secondscreen {
-    width: 250px;
+    width: 300px;
   }
 }
 @media (min-width: 1250px) {
