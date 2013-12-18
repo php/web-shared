@@ -8,7 +8,14 @@
  */
 
 isset($JS) || $JS = array();
+isset($SECONDSCREEN) || $SECONDSCREEN = "";
 ?>
+
+<?php if ($SECONDSCREEN): ?>
+<section class="secondscreen">
+  <?=$SECONDSCREEN?>
+</section>
+<?php endif ?>
 </section><!-- .fullscreen -->
 <footer>
   <nav class="fullscreen">
