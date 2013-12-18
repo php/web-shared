@@ -25,7 +25,11 @@ body {
   font: normal 1em Tahoma, Arial, sans-serif, serif, monospace;
   background-color: #E3E3F1;
   height: 100%;
+  width: 100%;
   font-size: 1em;
+  height: 100%;
+  position: fixed;
+  margin: 0 !important;
 }
 header {
   top: 0px;
@@ -39,9 +43,15 @@ header {
   z-index: 1;
 }
 footer {
-  width: 100%;
   border-top: .25em solid #99C;
   background-color: #262626 !important;
+  position: absolute;
+  bottom: 0px;
+  width: 100%;
+  height: 45px;
+}
+footer nav {
+  margin: 0 auto;
 }
 nav {
   line-height: 2.5;
@@ -54,6 +64,7 @@ nav ul {
   list-style: none;
   list-style-type: none;
   margin: 0;
+  padding: 0;
 }
 nav li {
   display: inline-block;
@@ -115,17 +126,17 @@ p {
   margin: .75em 0;
 }
 
-/* Pad the #fragment below the header */
-section *[id]:not(input){
-  margin-top: -50px;
-  padding-top: 50px;
+#padder {
+  position: fixed;
+  height: 100%;
+  overflow-y: scroll;
 }
+/* Pad the #fragment below the header */
 section.fullscreen {
   /* Force the content below the fixed header */
   display: block;
-  height: 100%;
   background: #fff;
-  padding: 1.5em;
+  padding-bottom: 50px;
 }
 .secondscreen {
   vertical-align: top;
@@ -158,24 +169,6 @@ section.fullscreen {
 }
 
 /* {{{ Responsive styles */
-.fullscreen {
-  width: 940px;
-  margin-right: auto;
-  margin-left: auto;
-  *zoom: 1;
-}
-.mainscreen, .secondscreen {
-  display: inline-block;
-}
-.mainscreen {
-  width: 700px;
-}
-.secondscreen {
-  width: 220px;
-}
-body {
-  margin: 50px 0 0 0;
-}
 #mainmenu-toggle-overlay, #mainmenu-toggle {
   display: none;
 }
@@ -183,7 +176,7 @@ body {
   /* This just has to be big enough to cover whatever's in nav. */
   max-height: 50em;
 }
-@media (max-width:465px) {
+@media (max-width:640px) {
 
   #mainmenu-toggle-overlay {
     background: #669 url(http://php.net/images/mobile-menu.png) no-repeat center center;
@@ -206,60 +199,99 @@ body {
     display: inline-block;
     opacity: 0;
   }
-  nav {
+  header nav {
     max-height: 0;
-    overflow: hidden;
+  }
+  nav {
+    overflow: auto;
+    clear: both;
   }
   nav ul, nav li, nav a {
     display: block;
-    padding: 0;
+    text-align: center;
   }
-  header {
+  .home {
     position: absolute;
+    top: 0;
   }
-}
-@media (max-width: 767px) {
-  .fullscreen {
-    width: auto;
-    padding: 0px 10px 0px 10px;
-  }
-  section.mainscreen {
-    width: auto;
-  }
+  #padder,
+  .fullscreen,
+  .mainscreen,
   .secondscreen {
+    display: block;
     width: 100%;
   }
+  #padder {
+    top: 50px;
+  }
   body {
-    margin: 100px 0 0 0;
+    margin: 0;
+    background-color: #fff;
+  }
+  footer {
+    max-height: 0;
+  }
+  img {
+    max-width: 100%;
   }
 }
-@media (min-width: 768px) and (max-width: 979px) {
-  .fullscreen {
-    width: 724px;
+@media (min-width: 641px) {
+  #padder {
+    width: 100%;
   }
-  .mainscreen {
-    width: 538px;
-  }
+  .fullscreen,
+  .mainscreen,
   .secondscreen {
-    width: 166px;
+    width: 90%;
+    display: inline-block;
   }
-}
-@media (min-width: 1200px) {
-  .fullscreen {
-    width: 1170px;
+  #padder {
+    top: 85px;
   }
-  .mainscreen {
-    width: 870px;
+  header, footer, #padder {
+    padding: 0 10%;
   }
-  .secondscreen {
-    margin-left: 10px;
-    width: 270px;
+  img {
+    max-width: 100%
   }
 }
 
-@media (min-width: 1500px) {
+@media (min-width: 1020px) {
+  #padder,
   .fullscreen {
-    width: 1440px;
+    display: block;
+  }
+  .fullscreen {
+    width: 85%;
+  }
+  #padder {
+    top: 45px;
+    width: 100%;
+    background-color: #E3E3F1;
+  }
+  #padder .fullscreen {
+    margin-bottom: 50px;
+  }
+  header, footer, #padder {
+    padding: 0 75px;
+  }
+  .mainscreen {
+    width: 70%;
+    display: inline-block;
+  }
+  .mainscreen {
+    padding: 0;
+  }
+  .secondscreen {
+    width: 250px;
+  }
+}
+@media (min-width: 1250px) {
+  .fullscreen {
+    width: 90%;
+  }
+  .mainscreen {
+    padding: 0 40px;
   }
 }
 /* }}} */
