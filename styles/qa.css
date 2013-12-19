@@ -6,7 +6,15 @@ footer {
   border-top: .25em solid #ff9900;
 }
 h1, h2, h3, h4, h5, h6 {
-	border-top-color: #ff9900;
-	border-bottom-color: #ffcc66;
+  border-top-color: #ff9900;
+  border-bottom-color: #ffcc66;
 }
 
+@media (max-width:640px) {
+
+  #mainmenu-toggle-overlay {
+    background-color: #ff9900 ;
+  }
+}
+
+/* vim: set expandtab shiftwidth=2 softtabstop=2 tabstop=2 fdm=marker : */

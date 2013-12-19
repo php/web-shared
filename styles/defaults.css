@@ -170,7 +170,7 @@ section.mainscreen {
 @media (max-width:640px) {
 
   #mainmenu-toggle-overlay {
-    background: #669 url(http://php.net/images/mobile-menu.png) no-repeat center center;
+    background: #669 url(//php.net/images/mobile-menu.png) no-repeat center center;
     float: right;
     display: block;
     height: 32px;
@@ -186,7 +186,7 @@ section.mainscreen {
     margin-top: 10px;
     margin-right: -34px;
     float: right;
-    border-bottom: 0 none;
+    border-bottom: 0;
     display: inline-block;
     opacity: 0;
   }
