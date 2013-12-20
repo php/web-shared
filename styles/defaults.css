@@ -24,16 +24,14 @@ body {
   color: #444 !important;
   font: normal 1em Tahoma, Arial, sans-serif, serif, monospace;
   background-color: #E3E3F1;
-  height: 100%;
   width: 100%;
-  height: 100%;
-  position: fixed;
-  margin: 0 !important;
+  overflow-y: scroll;
+}
+body, header, section, footer {
+  margin: 0;
+  padding: 0;
 }
 header {
-  top: 0px;
-  left: 0px;
-  position: fixed;
   width: 100%;
 
   border-bottom: 0.25em solid #669;
@@ -44,19 +42,16 @@ header {
 footer {
   border-top: .25em solid #99C;
   background-color: #262626 !important;
-  position: absolute;
-  bottom: 0px;
   width: 100%;
-  height: 45px;
-}
-footer nav {
-  margin: 0 auto;
 }
 nav {
   line-height: 2.5;
 }
 nav img {
   vertical-align: middle;
+}
+.mainscreen > * {
+  margin: 0 40px;
 }
 nav ul {
   display: inline-block;
@@ -93,56 +88,54 @@ nav input {
   box-shadow: inset 0 1px 2px rgba(0,0,0,.2);
 }
 
+section.fullscreen a {
+  color: #369;
+  border-bottom: 1px solid;
+  text-decoration: none;
+}
+
 h1, h2, h3, h4, h5, h6 {
   font-family: "Source Sans Pro", Helvetica, Arial, sans-serif !important;
   font-weight: bolder;
   color: #446;
   background: #E3E3F1;
-  border-radius: 0 0 2px 2px;
   border-color: #C6C6E2;
-  box-shadow: inset 1px 0 1px -1px #C6C6E2, inset -1px 0 1px -1px #C6C6E2;
   padding: 0.333333333em 0.444444444em !important;
-  margin-top: 0.333333333em !important;
   border-top: 2px solid #669;
   border-bottom: 1px solid;
 }
 h1 {
   font-size: 1.25em;
   line-height: 1;
-  margin:0 0 .5em !important;
+  margin:0 0 .5em;
 }
 h2 {
   font-size: 1.20em;
   line-height: 1.2;
-  margin:0 0 0.6em !important;
+  margin:0 0 0.6em;
 }
 h3 {
   font-size: 1.125em;
   line-height: 1.333333333;
-  margin:0 0 0.66666666666667em !important;
+  margin:0 0 0.66666666666667em;
 }
 p {
   margin: .75em 0;
 }
 
-section.fullscreen {
-  position: fixed;
-  height: 100%;
-  overflow-y: scroll;
-  display: block;
-  padding-bottom: 50px;
-
-}
 section.mainscreen {
   background: #fff;
   border: 1px solid #ccc;
   border-top: 0px;
   border-bottom: 0px;
 }
+.mainscreen {
+  border: 1px solid #99c;
+}
 .secondscreen {
   vertical-align: top;
-  display: inline-block;
 }
+
 
 /* Grab attention with a warning */
 .warning {
@@ -207,16 +200,13 @@ section.mainscreen {
     top: 0;
   }
   .fullscreen,
+  section.mainscreen,
   .mainscreen,
-  .secondscreen {
+  .secondscreen,
+  footer {
     width: 100%;
     display: block;
-  }
-  section.fullscreen {
-    top: 50px;
-  }
-  footer {
-    max-height: 0;
+    border: 0px;
   }
   img {
     max-width: 100%;
@@ -224,19 +214,11 @@ section.mainscreen {
 }
 @media (min-width: 641px) {
   .fullscreen,
-  .mainscreen,
-  .secondscreen {
-    width: 90%;
+  footer {
+    width: 100%;
+  }
+  .mainscreen {
     display: inline-block;
-  }
-  section.fullscreen {
-    top: 85px;
-  }
-  section.secondscreen {
-    margin-bottom: 75px;
-  }
-  header, footer, section.fullscreen {
-    padding: 0 10%;
   }
   img {
     max-width: 100%
@@ -245,38 +227,42 @@ section.mainscreen {
 
 @media (min-width: 1020px) {
   .fullscreen {
-    width: 100%;
-    display: block;
+    width: 90%;
+    margin: 0 auto;
   }
-  section.fullscreen {
-    top: 45px;
-  }
-  section.mainscreen {
-    margin-bottom: 75px;
-  }
-  header, footer, section.fullscreen {
-    padding: 0 10px;
+  header, footer
+  .mainscreen,
+  .secondscreen {
+    display: inline-block;
   }
   .mainscreen {
-    width: 65%;
-    display: inline-block;
-    padding: 0;
-    padding: 0 35px 0 0;
+    width: 70%;
   }
   .secondscreen {
-    width: 300px;
+    margin-left: 30px;
+    width: 25%
+  }
+  .secondscreen h1,
+  .secondscreen h2,
+  .secondscreen h3,
+  .secondscreen h4,
+  .secondscreen h5,
+  .secondscreen h6 {
+    margin: 0;
+    background: #f0f0f0;
+    border: 1px solid #d9d9d9;
+    border-bottom-color: #d0d0d0;
+    border-radius: 2px;
+  }
+  .secondscreen > nav {
+    background-color: #f9f9f9;
+    border: 1px solid #d9d9d9;
+    margin: 0;
   }
 }
-@media (min-width: 1250px) {
-  header, footer, section.fullscreen {
-    padding: 0 40px;
-  }
+@media (min-width: 1680px) {
   .fullscreen {
-    width: 100%;
-  }
-  .mainscreen {
-    width: 65%;
-    padding: 0 40px;
+    max-width: 1700px;
   }
 }
 /* }}} */
