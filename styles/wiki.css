@@ -919,8 +919,26 @@ div.code pre.codeShown {
 {
 	display: none;
 }
+.secondscreen > div > div {
+	background-color: #f9f9f9;
+	border: 1px solid #d9d9d9;
+	margin: 0;
+}
+#dokuwiki__site {
+	margin: 0 40px;
+}
+#dokuwiki__site > .site {
+	padding: 0;
+}
+#dw__toc a {
+	border-bottom: 0px;
+	text-decoration: underline;
+}
 @media (max-width:640px) {
 	#dokuwiki__pagetools ul {
 		display: hidden;
+	}
+	#dokuwiki__site {
+		margin: 0px;
 	}
 }
