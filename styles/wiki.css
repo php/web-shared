@@ -930,6 +930,17 @@ div.code pre.codeShown {
 #dokuwiki__site > .site {
 	padding: 0;
 }
+.level1,
+.level2,
+.level3 {
+	overflow-x: auto;
+	overflow-y: hidden;
+	text-overflow: ellipsis;
+	word-wrap: break-word;
+}
+.code {
+	word-wrap: normal;
+}
 #dw__toc a {
 	border-bottom: 0px;
 	text-decoration: underline;
