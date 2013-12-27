@@ -1,3 +1,16 @@
 .subdomain {
 	display: none;
 }
+nav#resources {
+	background-color: #333;
+	opacity: 0.9;
+	vertical-align: top;
+	color: #fff;
+}
+nav#resources li {
+	display: block;
+}
+nav#resources a {
+	border: 0;
+}
+
