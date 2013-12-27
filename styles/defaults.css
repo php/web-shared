@@ -50,7 +50,7 @@ nav {
 nav img {
   vertical-align: middle;
 }
-.fullscreen > .fullscreen *,
+.fullscreen > .fullscreen > *,
 .mainscreen > * {
   margin: 0 40px;
 }
