@@ -1,16 +1,71 @@
 .subdomain {
-	display: none;
+  display: none;
 }
 nav#resources {
-	background-color: #333;
-	opacity: 0.9;
-	vertical-align: top;
-	color: #fff;
+  background-color: #333;
+  opacity: 0.9;
+  vertical-align: top;
+  color: #fff;
 }
 nav#resources li {
-	display: block;
+  display: block;
 }
 nav#resources a {
-	border: 0;
+  border: 0;
+}
+#users thead tr,
+#users tfoot tr {
+  background-color: #fff;
+}
+#users tbody tr:nth-child(odd) {
+  background-color: #bbd;
+}
+#users tbody tr:nth-child(even) {
+  background-color: #E3E3F1;
+}
+#users td {
+  padding: 5px;
+  margin: 0px;
+}
+#users {
+  border-spacing: 0;
+  width: 100%;
+  padding-right: 80px;
+}
+#users th {
+  border-bottom: 2px solid #6678b1;
+}
+#users tbody td:nth-of-type(1) {
+  width: 150px;
+  text-align: center;
+}
+#users tbody td:nth-of-type(3) {
+  width: 30%;
+}
+#users tbody td:nth-of-type(4) {
+  width: 150px;
 }
 
+#users tfoot td:nth-of-type(2),
+#users thead td:nth-of-type(2) {
+  text-align: center;
+}
+#users tfoot td:nth-of-type(3),
+#users thead td:nth-of-type(3) {
+  text-align: right;
+}
+.browse ul,
+.browse li {
+  display: inline-block;
+  font-size: .9em;
+  margin: 0;
+  padding: 0 0 0 20px;
+}
+#users tbody tr.noaccess {
+  background-color: #ffdddd;
+}
+#users .noaccess td {
+  border-bottom: 1px solid #000;
+}
+
+/* vim: set expandtab shiftwidth=2 softtabstop=2 tabstop=2 fdm=marker : */
