@@ -50,10 +50,6 @@ nav {
 nav img {
   vertical-align: middle;
 }
-.fullscreen > .fullscreen > *,
-.mainscreen > * {
-  margin: 0 40px;
-}
 nav ul {
   display: inline-block;
   list-style: none;
@@ -142,6 +138,10 @@ section.mainscreen {
   border: 1px solid #ccc;
   border-top: 0px;
   border-bottom: 0px;
+}
+.fullscreen > .fullscreen > *,
+.mainscreen > * {
+  margin: 0 40px;
 }
 .fullscreen > .fullscreen,
 .mainscreen {
