@@ -199,6 +199,32 @@ th {
 }
 /* }}} */
 
+/* {{{ Mega Drop Down */
+#megadropdown {
+    display: none;
+    background-color: #333;
+    height: 100%;
+    width: 100%;
+    opacity: 0.9;
+    position: fixed;
+    top: 0;
+    z-index: 5000;
+}
+#megadropdown dt {
+    color: #eee;
+}
+#megadropdown dl {
+    display: inline-block;
+    vertical-align: top;
+}
+#megadropdown a {
+    color: #eee;
+    display: block;
+    border-bottom: none;
+    padding: 1px;
+}
+/* }}} */
+
 /* {{{ Responsive styles */
 #mainmenu-toggle-overlay, #mainmenu-toggle {
   display: none;
