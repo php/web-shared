@@ -953,3 +953,21 @@ div.code pre.codeShown {
 		margin: 0px;
 	}
 }
+#breadcrumbs nav {
+  margin-left: -1px;
+  margin-right: -1px;
+  font-size: .8em;
+}
+#breadcrumbs ol {
+  background-color: #bbd;
+  margin: 0;
+  padding: 0 10px 0 10px;
+}
+#breadcrumbs li+li:before {
+  padding: 0 .5em 0;
+  content: "\203A";
+}
+#breadcrumbs nav a {
+  border: 0;
+}
+
