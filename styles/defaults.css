@@ -166,6 +166,34 @@ section.mainscreen {
 
   color: #660000;
 }
+/* {{{ Default table styling */
+table {
+  border-spacing: 0;
+  width: 100%;
+  padding-right: 80px;
+}
+tbody tr:nth-child(odd) {
+  background-color: #bbd;
+}
+tbody tr:nth-child(even) {
+  background-color: #E3E3F1;
+}
+thead tr,
+tfoot tr {
+	background-color: #99c;
+}
+thead th {
+	border-bottom: 2px solid #669;
+}
+tfoot th {
+	border-top: 2px solid #669;
+}
+td,
+th {
+  padding: 5px;
+  margin: 0px;
+}
+/* }}} */
 
 /* {{{ Responsive styles */
 #mainmenu-toggle-overlay, #mainmenu-toggle {
