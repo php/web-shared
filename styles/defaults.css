@@ -15,11 +15,9 @@
  * small devices, with a "menu icon" which toggles those items.
  * When toggled, each menu item plus the searchbox are printed
  * on its own line (rather then inline-block, as is the default).
- *
- * This stylesheet also includes the anchor fix, so #fragment
- * does not get hidden by the fixed header.
  */
 
+/* {{{ Base styles */
 body {
   color: #444 !important;
   font: normal 1em Tahoma, Arial, sans-serif, serif, monospace;
@@ -33,7 +31,6 @@ body, header, section, footer {
 }
 header {
   width: 100%;
-
   border-bottom: 0.25em solid #669;
   background-color: #99c;
   box-shadow: 0 .25em .25em rgba(0,0,0,.1);
@@ -84,13 +81,6 @@ nav input {
   border-radius: 2px;
   box-shadow: inset 0 1px 2px rgba(0,0,0,.2);
 }
-
-section.fullscreen a {
-  color: #369;
-  border-bottom: 1px solid;
-  text-decoration: none;
-}
-
 h1, h2, h3, h4, h5, h6, dt {
   font-family: "Source Sans Pro", Helvetica, Arial, sans-serif !important;
   font-weight: bolder;
@@ -131,7 +121,10 @@ dd {
 p {
   margin: .75em 0;
 }
+/* }}} */
 
+/* {{{ fullscreen/mainscreen/secondscreen tweaks */
+/* For (responsive) widths, see the Reponsive styles */
 .fullscreen > .fullscreen,
 section.mainscreen {
   background: #fff;
@@ -151,6 +144,15 @@ section.mainscreen {
 .secondscreen {
   vertical-align: top;
 }
+section.fullscreen a {
+  color: #369;
+  border-bottom: 1px solid;
+  text-decoration: none;
+}
+section.fullscreen .current:before {
+  content: "\bb \20";
+}
+/* }}} */
 
 
 /* Grab attention with a warning */
@@ -167,6 +169,7 @@ section.mainscreen {
 
   color: #660000;
 }
+
 /* {{{ Default table styling */
 table {
   border-spacing: 0;
