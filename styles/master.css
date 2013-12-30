@@ -13,24 +13,38 @@ nav#resources li {
 nav#resources a {
   border: 0;
 }
-#users thead tr,
-#users tfoot tr {
-  background-color: #fff;
-}
-#users tbody tr:nth-child(odd) {
-  background-color: #bbd;
-}
-#users tbody tr:nth-child(even) {
-  background-color: #E3E3F1;
-}
-#users td {
-  padding: 5px;
-  margin: 0px;
-}
+.useredit,
 #users {
   border-spacing: 0;
   width: 100%;
   padding-right: 80px;
+}
+#users thead tr,
+#users tfoot tr {
+  background-color: #fff;
+}
+.useredit tbody tr:nth-child(odd),
+#users tbody tr:nth-child(odd) {
+  background-color: #bbd;
+}
+.useredit tbody tr:nth-child(even),
+#users tbody tr:nth-child(even) {
+  background-color: #E3E3F1;
+}
+.useredit tfoot tr {
+  background-color: #E3E3F1;
+}
+.useredit tfoot tr:last-child {
+  background-color: #bbd;
+}
+.useredit tfoot tr:last-child td {
+  text-align: right;
+}
+.useredit th,
+.useredit td,
+#users td {
+  padding: 5px;
+  margin: 5px;
 }
 #users th {
   border-bottom: 2px solid #6678b1;
@@ -53,6 +67,23 @@ nav#resources a {
 #users tfoot td:nth-of-type(3),
 #users thead td:nth-of-type(3) {
   text-align: right;
+}
+.useredit th:nth-of-type(1) {
+  text-align: right;
+}
+.useredit td:nth-of-type(1) {
+  text-align: left;
+}
+.useredit th {
+  width: 250px;
+}
+.useredit td,
+.useredit th {
+  vertical-align: top;
+}
+.useredit textarea {
+  width: 90%;
+  height: 300px;
 }
 .browse ul,
 .browse li {
