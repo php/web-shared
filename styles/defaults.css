@@ -141,7 +141,8 @@ section.mainscreen {
 }
 .fullscreen > .fullscreen > *,
 .mainscreen > * {
-  margin: 0 40px;
+  margin-right: 40px;
+  margin-left: 40px;
 }
 .fullscreen > .fullscreen,
 .mainscreen {
