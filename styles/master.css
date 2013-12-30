@@ -99,4 +99,8 @@ nav#resources a {
   border-bottom: 1px solid #000;
 }
 
+#mirrors tr {
+  background-color: #ffffff;
+}
+
 /* vim: set expandtab shiftwidth=2 softtabstop=2 tabstop=2 fdm=marker : */
