@@ -9,6 +9,9 @@ h1, h2, h3, h4, h5, h6 {
   border-top-color: #ff9900;
   border-bottom-color: #ffcc66;
 }
+.mainscreen {
+  border-color: #ffcc66;
+}
 
 @media (max-width:640px) {
 
