@@ -70,6 +70,7 @@ $ROOT = substr($_SERVER["SERVER_NAME"], -8) == ".php.net" ? "//shared.php.net" :
 <?php endif ?>
   </nav>
 </header>
+<div id="flash-message"></div>
 <nav id="megadropdown"></nav>
 
 <section class="fullscreen">

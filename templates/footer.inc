@@ -29,6 +29,9 @@ $ROOT = substr($_SERVER["SERVER_NAME"], -8) == ".php.net" ? "//shared.php.net" :
   </nav>
 </footer>
 
+<script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+<script src="<?php echo $ROOT?>/js/external/mousetrap.min.js"></script>
+<script src="<?php echo $ROOT?>/js/common.js"></script>
 <?php foreach($JS as $script) :?>
   <?php if (strncmp($script, "//", 2) == 0): ?>
     <script type="text/javascript" src="<?php echo $script?>"></script>
