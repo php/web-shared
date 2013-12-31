@@ -10,7 +10,7 @@
  *   $HEAD_RAND = ""; // Random extra values needed for in <head>
  *                  array("href" => "/link.php", "text" => "Link text")
  *                ); // Menu menu links
- *   $CSS       = array("//example.com/external.css", "/shared/styles/local.js");
+ *   $CSS       = array("/styles/local.css"); // (relative to /shared)
  *   $SEARCH    = array(
  *                  "method"      => "get",
  *                  "action"      => "/search.php",
@@ -25,6 +25,7 @@ isset($LINKS)     || $LINKS     = array();
 isset($HEAD_RAND) || $HEAD_RAND = "";
 isset($CSS)       || $CSS       = array();
 isset($SEARCH)    || $SEARCH    = array();
+$ROOT = substr($_SERVER["SERVER_NAME"], -8) == ".php.net" ? "//shared.php.net" : "/shared";
 ?>
 <!DOCTYPE html>
 <html>
@@ -33,10 +34,10 @@ isset($SEARCH)    || $SEARCH    = array();
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
   <title>PHP: <?=$TITLE ?></title>
-  <link type="text/css" media="all" rel="stylesheet" href="/shared/styles/defaults.css">
+  <link type="text/css" media="all" rel="stylesheet" href="<?php echo $ROOT?>/styles/defaults.css">
 
 <?php foreach($CSS as $style): ?>
-  <link type="text/css" media="all" rel="stylesheet" href="<?=$style?>">
+  <link type="text/css" media="all" rel="stylesheet" href="<?php echo $ROOT?><?php echo $style?>">
 <?php endforeach ?>
 
   <link href="//fonts.googleapis.com/css?family=Source+Sans+Pro:400,600,400italic,600italic|Source+Code+Pro&subset=latin,latin-ext" rel="stylesheet" type="text/css">

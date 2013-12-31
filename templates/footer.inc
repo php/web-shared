@@ -4,11 +4,13 @@
  *
  * Required variables:
  *
- *   $JS = array("//example.com/external.js", "/shared/js/local.js");
+ *   // Relative to /share, or prefixed with // for external js
+ *   $JS = array("//example.com/external.js", "/js/local.js");
  */
 
 isset($JS) || $JS = array();
 isset($SECONDSCREEN) || $SECONDSCREEN = "";
+$ROOT = substr($_SERVER["SERVER_NAME"], -8) == ".php.net" ? "//shared.php.net" : "/shared";
 ?>
 
 <?php if ($SECONDSCREEN): ?>
@@ -28,7 +30,11 @@ isset($SECONDSCREEN) || $SECONDSCREEN = "";
 </footer>
 
 <?php foreach($JS as $script) :?>
-<script type="text/javascript" src="<?=$script?>"></script>
+  <?php if (strncmp($script, "//", 2) == 0): ?>
+    <script type="text/javascript" src="<?php echo $script?>"></script>
+  <?php else: ?>
+    <script type="text/javascript" src="<?php echo $ROOT ?><?php echo $script?>"></script>
+  <?php endif ?>
 <?php endforeach ?>
 </body>
 </html>
