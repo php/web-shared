@@ -1,7 +1,7 @@
 /* Used for username/fullname search autocomplete/suggest */
 /* {{{ Stolen from http://www.devbridge.com/projects/autocomplete/jquery/ */
 .autocomplete-w1 {
-  background: url(images/shadow.png) no-repeat bottom right;
+  background: url(../images/autocomplete-shadow.png) no-repeat bottom right;
   position: absolute;
   top: 0px;
   left: 0px;
