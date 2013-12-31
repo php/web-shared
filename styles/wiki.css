@@ -239,7 +239,7 @@ a:link, a:visited {
   /* align right if the ul is larger because one item is focused */
 }
 #dokuwiki__pagetools ul li a:before {
-  content: url(/lib/tpl/phpnet/images/pagetools-sprite.png?v=2);
+  content: url(//wiki.php.net/lib/tpl/phpnet/images/pagetools-sprite.png?v=2);
   display: inline-block;
   font-size: 0;
   line-height: 0;
@@ -265,7 +265,7 @@ a:link, a:visited {
   height: auto;
   overflow: visible;
   padding: 5px 40px 5px 5px;
-  background-image: url(/lib/tpl/phpnet/images/pagetools-sprite.png?v=2);
+  background-image: url(//wiki.php.net/lib/tpl/phpnet/images/pagetools-sprite.png?v=2);
 }
 #dokuwiki__pagetools:hover ul li a:before,
 #dokuwiki__pagetools ul li a:focus:before {
@@ -282,7 +282,7 @@ a:link, a:visited {
 }
 /* IE7 fixes, doesn't work without images */
 #IE7 #dokuwiki__pagetools ul li a {
-  background-image: url(/lib/tpl/phpnet/images/pagetools-sprite.png?v=2);
+  background-image: url(//wiki.php.net/lib/tpl/phpnet/images/pagetools-sprite.png?v=2);
 }
 #IE7 #dokuwiki__pagetools:hover ul li a span,
 #IE7 #dokuwiki__pagetools ul li a:focus span,
