@@ -5,6 +5,15 @@ header {
 footer {
   border-top: .25em solid #ff9900;
 }
+
+nav a {
+  color: #555555 !important;
+}
+
+nav a:hover {
+  color: #000000 !important;
+}
+
 h1, h2, h3, h4, h5, h6 {
   border-top-color: #ff9900;
   border-bottom-color: #ffcc66;
