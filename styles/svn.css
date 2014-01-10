@@ -1,0 +1,15 @@
+.vc_diff_change {
+  background: yellow;
+}
+.vc_diff_change_empty {
+  background-color: gold;
+}
+.vc_diff_chunk_header td {
+  background: orange;
+}
+.vc_diff_remove {
+  background-color: hotpink;
+}
+.vc_diff_add {
+  background-color: green;
+}
