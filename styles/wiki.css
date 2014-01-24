@@ -938,6 +938,9 @@ div.code pre.codeShown {
 	text-overflow: ellipsis;
 	word-wrap: break-word;
 }
+ul .level1, ul .level2, ul .level3 {
+	overflow: auto;
+}
 .code {
 	word-wrap: normal;
 }
