@@ -40,7 +40,7 @@ $ROOT = substr($_SERVER["SERVER_NAME"], -8) == ".php.net" ? "//shared.php.net" :
   <link type="text/css" media="all" rel="stylesheet" href="<?php echo $ROOT?><?php echo $style?>">
 <?php endforeach ?>
 
-  <link href="//fonts.googleapis.com/css?family=Source+Sans+Pro:400,600,400italic,600italic|Source+Code+Pro&subset=latin,latin-ext" rel="stylesheet" type="text/css">
+  <link href="//fonts.googleapis.com/css?family=Source+Sans+Pro:400,600,400italic,600italic|Source+Code+Pro&amp;subset=latin,latin-ext" rel="stylesheet" type="text/css">
   <link rel="shortcut icon" href="//php.net/favicon.ico">
 <!--[if lt IE 9]>
   <script src="//shared.php.net/js/html5shiv.js"></script>
