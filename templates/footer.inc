@@ -34,9 +34,9 @@ $ROOT = substr($_SERVER["SERVER_NAME"], -8) == ".php.net" ? "//shared.php.net" :
 <script src="<?php echo $ROOT?>/js/common.js"></script>
 <?php foreach($JS as $script) :?>
   <?php if (strncmp($script, "//", 2) == 0): ?>
-    <script type="text/javascript" src="<?php echo $script?>"></script>
+    <script src="<?php echo $script?>"></script>
   <?php else: ?>
-    <script type="text/javascript" src="<?php echo $ROOT ?><?php echo $script?>"></script>
+    <script src="<?php echo $ROOT ?><?php echo $script?>"></script>
   <?php endif ?>
 <?php endforeach ?>
 </body>

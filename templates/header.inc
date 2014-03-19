@@ -34,13 +34,13 @@ $ROOT = substr($_SERVER["SERVER_NAME"], -8) == ".php.net" ? "//shared.php.net" :
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
   <title>PHP: <?=$TITLE ?></title>
-  <link type="text/css" media="all" rel="stylesheet" href="<?php echo $ROOT?>/styles/defaults.css">
+  <link media="all" rel="stylesheet" href="<?php echo $ROOT?>/styles/defaults.css">
 
 <?php foreach($CSS as $style): ?>
-  <link type="text/css" media="all" rel="stylesheet" href="<?php echo $ROOT?><?php echo $style?>">
+  <link media="all" rel="stylesheet" href="<?php echo $ROOT?><?php echo $style?>">
 <?php endforeach ?>
 
-  <link href="//fonts.googleapis.com/css?family=Source+Sans+Pro:400,600,400italic,600italic|Source+Code+Pro&amp;subset=latin,latin-ext" rel="stylesheet" type="text/css">
+  <link href="//fonts.googleapis.com/css?family=Source+Sans+Pro:400,600,400italic,600italic|Source+Code+Pro&amp;subset=latin,latin-ext" rel="stylesheet">
   <link rel="shortcut icon" href="//php.net/favicon.ico">
 <!--[if lt IE 9]>
   <script src="//shared.php.net/js/html5shiv.js"></script>
