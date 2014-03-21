@@ -5,6 +5,7 @@
  */
 body {
   margin: 0 auto;
+  font: normal 1em/1.5 "Source Sans Pro", Helvetica, Arial, sans-serif;
 }
 #dokuwiki__site {
   margin: 0 auto;
@@ -696,13 +697,17 @@ div.code pre.codeShown{display:block;}
 */
 
 /*	The main preformatted block containing the hilighted code */
+
+pre,
+code {
+  font: normal .875rem/1.46 "Source Code Pro", "Courier New", Courier, monospace;
+}
 pre.code {
   background: #fcfdfe;
   border: thin dotted #ccc;
   color: #000;
   margin: 0 0 .75rem;
   padding: .75rem;
-  line-height: 1.46;
   overflow: auto;
   max-height: 50em;
   max-width: 99%;
