@@ -90,21 +90,17 @@ h1, h2, h3, h4, h5, h6, dt {
   border-top: 2px solid #669;
   border-bottom: 1px solid #C6C6E2;
   border-radius: 0 0 2px 2px;
+  line-height: 1.5rem;
+  margin:0 0 .75rem;
 }
 h1 {
-  font-size: 1.25em;
-  line-height: 1;
-  margin:0 0 .5em;
+  font-size: 1.5rem;
 }
 h2 {
-  font-size: 1.20em;
-  line-height: 1.2;
-  margin:0 0 0.6em;
+  font-size: 1.25rem;
 }
 h3, dt {
-  font-size: 1.125em;
-  line-height: 1.333333333;
-  margin:0 0 0.66666666666667em;
+  font-size: 1.125rem;
 }
 dl {
   background-color: #333;
@@ -119,7 +115,7 @@ dd {
   padding: 0.5em .444444444em !important;
 }
 p {
-  margin: .75em 0;
+  margin: .75rem 0;
 }
 /* }}} */
 
