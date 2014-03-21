@@ -643,7 +643,6 @@ a:link, a:visited {
 /*	Cascading Style Sheet for 'code' syntax plugin  -  2007-08-31
 	Copyright (C) 2007  M.Watermann, D-10247 Berlin, FRG  -  <support@mwat.de>
 */
-pre.code{background:#fcfdfe none;border:thin dotted #ccc;color:#000;margin:1ex 0;padding:0.4ex;line-height:1.2;overflow:auto;max-height:50em;max-width:99%;}
 .code .diff-addedline{background:#cfc none;color:#000;}
 .code .diff-blockheader{background:#ccf none;color:#000;}
 .code .diff-deletedline{background:#fcc none;color:#000;}
@@ -698,15 +697,15 @@ div.code pre.codeShown{display:block;}
 
 /*	The main preformatted block containing the hilighted code */
 pre.code {
-	background:	#fcfdfe none;
-	border:		thin dotted #ccc;
-	color:		#000;
-	margin:		1ex 0;
-	padding:	0.4ex;
-	line-height:1.2;
-	overflow:	auto;
-	max-height:	50em;
-	max-width:	99%;
+  background: #fcfdfe;
+  border: thin dotted #ccc;
+  color: #000;
+  margin: 0 0 .75rem;
+  padding: .75rem;
+  line-height: 1.2;
+  overflow: auto;
+  max-height: 50em;
+  max-width: 99%;
 }
 
 /*	The various code parts /
