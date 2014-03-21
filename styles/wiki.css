@@ -703,9 +703,9 @@ code {
   font: normal .875rem/1.46 "Source Code Pro", "Courier New", Courier, monospace;
 }
 pre.code {
-  background: #fcfdfe;
-  border: thin dotted #ccc;
-  color: #000;
+  background: #fff;
+  border: 1px solid #D9D9D9;
+  color: #333;
   margin: 0 0 .75rem;
   padding: .75rem;
   overflow: auto;
