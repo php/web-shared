@@ -20,7 +20,7 @@
 /* {{{ Base styles */
 body {
   color: #444 !important;
-  font: normal 1em Tahoma, Arial, sans-serif, serif, monospace;
+  font: normal 1em/1.5 Tahoma, Arial, sans-serif, serif, monospace;
   background-color: #E3E3F1;
   width: 100%;
   overflow-y: scroll;
@@ -86,10 +86,10 @@ h1, h2, h3, h4, h5, h6, dt {
   font-weight: bolder;
   color: #446;
   background: #E3E3F1;
-  border-color: #C6C6E2;
-  padding: 0.333333333em 0.444444444em !important;
+  padding: .75rem .5rem;
   border-top: 2px solid #669;
-  border-bottom: 1px solid;
+  border-bottom: 1px solid #C6C6E2;
+  border-radius: 0 0 2px 2px;
 }
 h1 {
   font-size: 1.25em;
