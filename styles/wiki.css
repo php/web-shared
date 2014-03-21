@@ -974,6 +974,6 @@ ul .level1, ul .level2, ul .level3 {
 #breadcrumbs nav a {
   border: 0;
 }
-.mainscreen {
+#breadcrumbs + .mainscreen {
   padding-top:1.5rem;
 }
