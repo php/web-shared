@@ -13,3 +13,18 @@
 .vc_diff_add {
   background-color: green;
 }
+#vc_file>table {
+  white-space: pre-wrap;
+  font-family: monospace;
+  padding-right: 0;
+}
+#vc_file>table tr:nth-child(even) {
+  background: #f0f3ff;
+}
+#vc_file>table tr:nth-child(odd) {
+  background: #fff;
+}
+#vc_file>table td.vc_file_line_number {
+  vertical-align: top;
+  color: #aaa;
+}
