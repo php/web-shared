@@ -19,3 +19,8 @@
   margin:0;
   padding-left:5px;
 }
+
+time.gen-date {
+  font-size:0.8rem;
+  display:block;
+}
