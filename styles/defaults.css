@@ -86,7 +86,7 @@ h1, h2, h3, h4, h5, h6, dt {
   font-weight: bolder;
   color: #446;
   background: #E3E3F1;
-  padding: .5rem;
+  padding: .375em .5em;
   border-top: 2px solid #669;
   border-bottom: 1px solid #C6C6E2;
   border-radius: 0 0 2px 2px;
@@ -115,7 +115,11 @@ dd {
   padding: 0.5em .444444444em !important;
 }
 p {
-  margin: .75rem 0;
+  margin: 0 0 .75rem;
+}
+ul, ol {
+  margin: 0 0 .75rem;
+  padding:0 0 0 2.5rem;
 }
 /* }}} */
 

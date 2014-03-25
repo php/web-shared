@@ -987,3 +987,35 @@ div.footnotes {
   padding:.75em 0;
   margin: 0 0 .75em;
 }
+
+/* {{{ Spacing of Wiki Sections */
+/* If DokuWiki nested sections properly this would be much cleaner */
+h1 + .level1,
+h2 + .level2,
+h3 + .level3,
+h4 + .level4,
+h5 + .level5,
+h6 + .level6 {
+  margin-bottom:1.5rem;
+}
+h3, h3 + .level3 {
+  margin-left:1.5rem;
+}
+h4, h4 + .level4 {
+  margin-left:3rem;
+}
+h5, h5 + .level5 {
+  margin-left:4.5rem;
+}
+h6, h6 + .level6 {
+  margin-left:6rem;
+}
+h1 + .level1 > :last-child,
+h2 + .level2 > :last-child,
+h3 + .level3 > :last-child,
+h4 + .level4 > :last-child,
+h5 + .level5 > :last-child,
+h6 + .level6 > :last-child {
+  margin-bottom:0;
+}
+/* }}} */
