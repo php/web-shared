@@ -1,5 +1,4 @@
 <?php
-$JS = array();
 /**
  * Typical footer
  *
