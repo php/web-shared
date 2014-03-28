@@ -21,7 +21,7 @@
 body {
   color: #444 !important;
   font: normal 1em/1.5 Tahoma, Arial, sans-serif, serif, monospace;
-  background-color: #E3E3F1;
+  background-color: #C4C9DF;
   width: 100%;
   overflow-y: scroll;
 }
@@ -31,14 +31,14 @@ body, header, section, footer {
 }
 header {
   width: 100%;
-  border-bottom: 0.25em solid #669;
-  background-color: #99c;
+  border-bottom: 0.25em solid #4F5B93;
+  background-color: #8892BF;
   box-shadow: 0 .25em .25em rgba(0,0,0,.1);
   z-index: 1;
 }
 footer {
-  border-top: .25em solid #99C;
-  background-color: #262626 !important;
+  border-top: .25em solid #8892BF;
+  background-color: #333 !important;
   width: 100%;
 }
 nav {
@@ -84,11 +84,11 @@ nav input {
 h1, h2, h3, h4, h5, h6, dt {
   font-family: "Source Sans Pro", Helvetica, Arial, sans-serif !important;
   font-weight: bolder;
-  color: #446;
-  background: #E3E3F1;
+  color: #333;
+  background: #E2E4EF;
   padding: .375em .5em;
-  border-top: 2px solid #669;
-  border-bottom: 1px solid #C6C6E2;
+  border-top: 2px solid #4F5B93;
+  border-bottom: 1px solid #C4C9DF;
   border-radius: 0 0 2px 2px;
   line-height: 1.5rem;
   margin:0 0 .75rem;
@@ -139,7 +139,7 @@ section.mainscreen {
 }
 .fullscreen > .fullscreen,
 .mainscreen {
-  border: 1px solid #99c;
+  border: 1px solid #8892BF;
 }
 .secondscreen {
   vertical-align: top;
@@ -180,17 +180,17 @@ tbody tr:nth-child(odd) {
   background-color: #bbd;
 }
 tbody tr:nth-child(even) {
-  background-color: #E3E3F1;
+  background-color: #E2E4EF;
 }
 thead tr,
 tfoot tr {
-	background-color: #99c;
+	background-color: #8892BF;
 }
 thead th {
-	border-bottom: 2px solid #669;
+	border-bottom: 2px solid #4F5B93;
 }
 tfoot th {
-	border-top: 2px solid #669;
+	border-top: 2px solid #4F5B93;
 }
 td,
 th {
@@ -236,7 +236,7 @@ th {
 @media (max-width:640px) {
 
   #mainmenu-toggle-overlay {
-    background: #669 url(//php.net/images/mobile-menu.png) no-repeat center center;
+    background: #4F5B93 url(//php.net/images/mobile-menu.png) no-repeat center center;
     float: right;
     display: block;
     height: 32px;
