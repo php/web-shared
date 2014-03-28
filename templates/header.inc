@@ -27,7 +27,6 @@ isset($CSS)       || $CSS       = array();
 isset($SEARCH)    || $SEARCH    = array();
 $ROOT = substr($_SERVER["SERVER_NAME"], -8) == ".php.net" ? "//shared.php.net" : "/shared";
 $current_time = time();
-$default_css_mtime = filemtime(__DIR__ . '/../styles/defaults.css') ?: $current_time;
 ?>
 <!DOCTYPE html>
 <html>
@@ -36,10 +35,12 @@ $default_css_mtime = filemtime(__DIR__ . '/../styles/defaults.css') ?: $current_
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
   <title>PHP: <?=$TITLE ?></title>
-  <link media="all" rel="stylesheet" href="<?php echo "$ROOT/styles/defaults.css?filemtime=$default_css_mtime";?>">
 
 <?php
-foreach($CSS as $style):
+$styles = array_merge($CSS, array(
+  '/styles/defaults.css'
+));
+foreach($styles as $style):
   // note that $style should have a leading slash
   $filemtime = filemtime(__DIR__ . '/..' . $style) ?: $current_time;
   echo "  <link media='all' rel='stylesheet' href='{$ROOT}{$style}?filemtime=$filemtime'/>\n";

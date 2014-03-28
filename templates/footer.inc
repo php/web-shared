@@ -11,12 +11,6 @@
 isset($JS) || $JS = array();
 isset($SECONDSCREEN) || $SECONDSCREEN = "";
 $ROOT = substr($_SERVER["SERVER_NAME"], -8) == ".php.net" ? "//shared.php.net" : "/shared";
-$current_time = time();
-$scripts = array_merge($JS, array(
-    '//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js',
-    '/js/external/mousetrap.min.js',
-    '/js/common.js'
-));
 ?>
 
 <?php if ($SECONDSCREEN): ?>
@@ -36,15 +30,20 @@ $scripts = array_merge($JS, array(
 </footer>
 
 <?php
-foreach ($scripts as $script) {
+$current_time = time();
+$scripts = array_merge($JS, array(
+  '//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js',
+  '/js/external/mousetrap.min.js',
+  '/js/common.js'
+));
+foreach ($scripts as $script):
   if (strncmp($script, "//", 2) == 0) {
     echo "<script src='$script'></script>\n";
   } else { 
-    $filemtime = filemtime(__DIR__ . "/..{$script}") ?: time();
+    $filemtime = filemtime(__DIR__ . "/..{$script}") ?: $current_time;
     echo "<script src='{$ROOT}{$script}?filemtime=$filemtime'></script>\n";
   }
-}
-?>
+endforeach ?>
 </body>
 </html>
 <?php /* vim: set ft=html et ts=2 sw=2: : */ ?>
