@@ -57,7 +57,7 @@ nav ul {
 nav li {
   display: inline-block;
 }
-nav a {
+header nav a {
   display: inline-block;
   font: normal 16px/2.5 "Source Sans Pro", Helvetica, Arial, sans-serif !important;
   padding: 0 0.75em;
