@@ -56,7 +56,7 @@ endforeach
 </head>
 <body id="<?=$SUBDOMAIN?>">
 
-<header>
+<header class='clearfix'>
   <div id="mainmenu-toggle-overlay"></div>
   <input type="checkbox" id="mainmenu-toggle">
   <nav class="fullscreen">
@@ -83,7 +83,7 @@ endforeach
 <div id="flash-message"></div>
 <nav id="megadropdown"></nav>
 
-<section class="fullscreen">
+<section class="fullscreen clearfix">
 
 
 <?php /* vim: set ft=html et ts=2 sw=2: : */ ?>

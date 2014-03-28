@@ -121,10 +121,24 @@ ul, ol {
   margin: 0 0 .75rem;
   padding:0 0 0 2.5rem;
 }
+.clearfix:before,
+.clearfix:after {
+  display:table;
+  content:"";
+  line-height:0;
+}
+.clearfix:after {
+  clear:both;
+}
 /* }}} */
 
 /* {{{ fullscreen/mainscreen/secondscreen tweaks */
 /* For (responsive) widths, see the Reponsive styles */
+.fullscreen,
+.mainscreen,
+.secondscreen {
+  box-sizing:border-box;
+}
 .fullscreen > .fullscreen,
 section.mainscreen {
   background: #fff;
