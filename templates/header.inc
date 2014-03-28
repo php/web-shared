@@ -37,9 +37,9 @@ $current_time = time();
   <title>PHP: <?=$TITLE ?></title>
 
 <?php
-$styles = array_merge($CSS, array(
+$styles = array_merge(array(
   '/styles/defaults.css'
-));
+), $CSS);
 foreach($styles as $style):
   // note that $style should have a leading slash
   $filemtime = filemtime(__DIR__ . '/..' . $style) ?: $current_time;
