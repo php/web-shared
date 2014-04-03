@@ -343,7 +343,7 @@ th {
     margin: 0;
   }
 }
-@media (min-width:1280px) {
+@media (min-width:1680px) {
   html {
     font-size:112.5%;
   }
