@@ -18,9 +18,12 @@
  */
 
 /* {{{ Base styles */
+html {
+  font-size:100%;
+}
 body {
   color: #444 !important;
-  font: normal 1em/1.5 Tahoma, Arial, sans-serif, serif, monospace;
+  font: normal 1rem/1.5 Tahoma, Arial, sans-serif, serif, monospace;
   background-color: #C4C9DF;
   width: 100%;
   overflow-y: scroll;
@@ -305,10 +308,6 @@ th {
   }
 }
 @media (min-width: 641px) {
-  .fullscreen,
-  footer {
-    width: 100%;
-  }
   img {
     max-width: 100%
   }
@@ -316,7 +315,7 @@ th {
 
 @media (min-width: 1020px) {
   .fullscreen {
-    width: 90%;
+    max-width: 80rem;
     margin: 0 auto;
   }
   .mainscreen {
@@ -344,9 +343,19 @@ th {
     margin: 0;
   }
 }
-@media (min-width: 1680px) {
-  .fullscreen {
-    max-width: 1700px;
+@media (min-width:1280px) {
+  html {
+    font-size:112.5%;
+  }
+}
+@media (min-width:1920px) {
+  html {
+    font-size:125%;
+  }
+}
+@media (min-width:2560px) {
+  html {
+    font-size:150%;
   }
 }
 /* }}} */
