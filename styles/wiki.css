@@ -106,9 +106,15 @@ body {
   border-top:0;
   border-right:0;
   border-bottom:1px dotted #999;
+  padding:.75rem 1.5rem;
+  positon:relative;
+}
+#dw__toc > h3 > strong {
+  position: absolute;
+  margin-left:-.75em
 }
 #dw__toc > div {
-    padding: 0 1.5rem 1.5rem 1.25rem;
+    padding: .75rem 1.5rem 1.5rem;
 }
 #dw__toc ul {
     padding: 0;
@@ -119,10 +125,10 @@ body {
     padding: 0;
     margin: 0;
 }
-#dw__toc ul ul {
+#dw__toc ul ul ul {
     padding-left: .75rem;
 }
-[dir=rtl] #dw__toc ul ul {
+[dir=rtl] #dw__toc ul ul ul {
     padding-left: 0;
     padding-right: .75rem;
 }
