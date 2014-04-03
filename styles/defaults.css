@@ -343,19 +343,14 @@ th {
     margin: 0;
   }
 }
-@media (min-width:1680px) {
+@media (min-width:1920px) {
   html {
     font-size:112.5%;
   }
 }
-@media (min-width:1920px) {
-  html {
-    font-size:125%;
-  }
-}
 @media (min-width:2560px) {
   html {
-    font-size:137.5%;
+    font-size:125%;
   }
 }
 /* }}} */
