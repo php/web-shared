@@ -81,7 +81,7 @@ body {
 /* toc container */
 #dw__toc a {
 	display: block;
-	padding: 2px 10px;
+	padding: 2px 0;
 	text-decoration: none;
 }
 
@@ -102,9 +102,13 @@ body {
 }
 
 /*____________ toc list ____________*/
-
+#dw__toc h3 {
+  border-top:0;
+  border-right:0;
+  border-bottom:1px dotted #999;
+}
 #dw__toc > div {
-    padding: .2em .5em;
+    padding: 0 1.5rem 1.5rem 1.25rem;
 }
 #dw__toc ul {
     padding: 0;
@@ -114,17 +118,13 @@ body {
     list-style: none;
     padding: 0;
     margin: 0;
-    line-height: 1.1;
-}
-#dw__toc ul li div.li {
-    padding: .15em 0;
 }
 #dw__toc ul ul {
-    padding-left: 1em;
+    padding-left: .75rem;
 }
 [dir=rtl] #dw__toc ul ul {
     padding-left: 0;
-    padding-right: 1em;
+    padding-right: .75rem;
 }
 #dw__toc ul ul li {
 }
@@ -920,12 +920,12 @@ div.code pre.codeShown {
 	display: none;
 }
 .secondscreen > div > div {
-	background-color: #f9f9f9;
-	border: 1px solid #d9d9d9;
+	background-color: #E6E6E6;
+	border-left: 1px solid #CCC;
 	margin: 0;
 }
 #dokuwiki__site {
-	margin: 0 40px;
+	margin: 0 40px 0 1.5rem;
 }
 #dokuwiki__site > .site {
 	padding: 0;
@@ -946,8 +946,9 @@ ul .level1, ul .level2, ul .level3 {
 	word-wrap: normal;
 }
 #dw__toc a {
-	border-bottom: 0px;
-	text-decoration: underline;
+  color: #333;
+  border-bottom: 1px dotted #999;
+  text-decoration: none;
 }
 @media (max-width:640px) {
 	#dokuwiki__pagetools ul {
@@ -957,15 +958,14 @@ ul .level1, ul .level2, ul .level3 {
 		margin: 0px;
 	}
 }
-#breadcrumbs nav {
-  margin-left: 0;
-  margin-right: 0;
-  font-size: .875rem;
+#breadcrumbs {
+  background-color: #E6E6E6;
+  border-bottom:1px solid #CCC;
+  padding: 0 1.5rem;
 }
 #breadcrumbs ol {
-  background-color: #E6E6E6;
   margin: 0;
-  padding: 0 .75rem;
+  padding:0;
 }
 #breadcrumbs li+li:before {
   padding: 0 .5em 0;
@@ -975,7 +975,7 @@ ul .level1, ul .level2, ul .level3 {
   border: 0;
 }
 #breadcrumbs + .mainscreen {
-  padding-top:1.5rem;
+  padding-top:1rem;
 }
 div.footnotes {
   border-top:1px dotted #669;
