@@ -158,21 +158,11 @@ ul, ol {
 .fullscreen > .fullscreen,
 section.mainscreen {
   background: #fff;
-  border: 1px solid #ccc;
-  border-top: 0px;
-  border-bottom: 0px;
 }
 .fullscreen > .fullscreen > *,
 .mainscreen > * {
   margin-right: 40px;
   margin-left: 40px;
-}
-.fullscreen > .fullscreen,
-.mainscreen {
-  border: 1px solid #8892BF;
-}
-.secondscreen {
-  vertical-align: top;
 }
 section.fullscreen a {
   color: #369;
@@ -309,7 +299,6 @@ th {
   footer {
     width: 100%;
     display: block;
-    border: 0px;
   }
   img {
     max-width: 100%;
@@ -319,9 +308,6 @@ th {
   .fullscreen,
   footer {
     width: 100%;
-  }
-  .mainscreen {
-    display: inline-block;
   }
   img {
     max-width: 100%
@@ -333,17 +319,13 @@ th {
     width: 90%;
     margin: 0 auto;
   }
-  header, footer
-  .mainscreen,
-  .secondscreen {
-    display: inline-block;
-  }
   .mainscreen {
-    width: 70%;
+    width: 75%;
+    float:left;
   }
   .secondscreen {
-    margin-left: 30px;
-    width: 25%
+    width: 25%;
+    float:left;
   }
   .secondscreen h1,
   .secondscreen h2,
@@ -352,14 +334,13 @@ th {
   .secondscreen h5,
   .secondscreen h6 {
     margin: 0;
-    background: #f0f0f0;
-    border: 1px solid #d9d9d9;
-    border-bottom-color: #d0d0d0;
+    background: #e6e6e6;
+    border: 1px solid #ccc;
     border-radius: 2px;
   }
   .secondscreen > nav {
-    background-color: #f9f9f9;
-    border: 1px solid #d9d9d9;
+    background-color: #e6e6e6;
+    border: 1px solid #ccc;
     margin: 0;
   }
 }
