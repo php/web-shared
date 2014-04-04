@@ -79,6 +79,10 @@ body {
 	display: none;
 }
 /* toc container */
+#dw__toc {
+  font-size:.875rem;
+  line-height:1.5rem;
+}
 #dw__toc a {
   display: block;
   text-decoration: none;
