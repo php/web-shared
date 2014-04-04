@@ -80,9 +80,8 @@ body {
 }
 /* toc container */
 #dw__toc a {
-	display: block;
-	padding: 2px 0;
-	text-decoration: none;
+  display: block;
+  text-decoration: none;
 }
 
 
@@ -105,16 +104,16 @@ body {
 #dw__toc h3 {
   border-top:0;
   border-right:0;
-  border-bottom:1px dotted #999;
-  padding:.75rem 1.5rem;
-  positon:relative;
+  border-bottom:0;
+  padding:.75rem 1.5rem .5rem;
+  position:relative;
 }
 #dw__toc > h3 > strong {
   position: absolute;
   margin-left:-.75em
 }
 #dw__toc > div {
-    padding: .75rem 1.5rem 1.5rem;
+    padding: 0 1.5rem 1.5rem;
 }
 #dw__toc ul {
     padding: 0;
@@ -131,10 +130,6 @@ body {
 [dir=rtl] #dw__toc ul ul ul {
     padding-left: 0;
     padding-right: .75rem;
-}
-#dw__toc ul ul li {
-}
-#dw__toc ul li a {
 }
 
 /* in case of toc list jumping one level
