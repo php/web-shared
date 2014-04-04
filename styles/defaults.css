@@ -326,7 +326,7 @@ th {
 
 @media (min-width: 1020px) {
   .fullscreen {
-    max-width: 80rem;
+    max-width: 85rem;
     margin: 0 auto;
   }
   .mainscreen {
@@ -352,16 +352,6 @@ th {
     background-color: #e6e6e6;
     border: 1px solid #ccc;
     margin: 0;
-  }
-}
-@media (min-width:1920px) {
-  html {
-    font-size:112.5%;
-  }
-}
-@media (min-width:2560px) {
-  html {
-    font-size:125%;
   }
 }
 /* }}} */
