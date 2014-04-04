@@ -149,6 +149,17 @@ ul, ol {
 .clearfix:after {
   clear:both;
 }
+sub,
+sup {
+  position:relative;
+  vertical-align:baseline;
+}
+sub {
+  bottom:-.25em;
+}
+sup {
+  top:-.4em;
+}
 /* }}} */
 
 /* {{{ fullscreen/mainscreen/secondscreen tweaks */
@@ -167,7 +178,7 @@ section.mainscreen {
   margin-right: 40px;
   margin-left: 40px;
 }
-section.fullscreen a {
+section a {
   color: #369;
   border-bottom: 1px solid;
   text-decoration: none;
