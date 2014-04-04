@@ -326,15 +326,16 @@ th {
 
 @media (min-width: 1020px) {
   .fullscreen {
-    max-width: 85rem;
+    /* width should be evenly divisible by 4rem */
+    max-width: 96rem;
     margin: 0 auto;
   }
   .mainscreen {
-    width: 72.3627%;
+    width: 73.4375%;
     float:left;
   }
   .secondscreen {
-    width: 27.6373%;
+    width: 26.5625%;
     float:left;
   }
   .secondscreen h1,
