@@ -82,6 +82,21 @@ body {
 #dw__toc a {
   display: block;
   text-decoration: none;
+  color: #333;
+  border-bottom: 1px dotted #999;
+  text-decoration: none;
+}
+#dw__toc a:hover,
+#dw__toc a:focus {
+  color:#693;
+  border-color:#693;
+  outline:none;
+}
+#dw__toc a:hover:before,
+#dw__toc a:focus:before {
+  content: "\bb \20";
+  position:absolute;
+  margin-left:-1em;
 }
 
 
@@ -945,11 +960,6 @@ ul .level1, ul .level2, ul .level3 {
 }
 .code {
 	word-wrap: normal;
-}
-#dw__toc a {
-  color: #333;
-  border-bottom: 1px dotted #999;
-  text-decoration: none;
 }
 @media (max-width:640px) {
 	#dokuwiki__pagetools ul {
