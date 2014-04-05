@@ -47,6 +47,9 @@ footer {
 nav {
   line-height: 2.5;
 }
+nav a.home {
+  margin:0 1.5rem;
+}
 nav img {
   vertical-align: middle;
 }
@@ -63,10 +66,12 @@ nav li {
 header nav a {
   display: inline-block;
   font: normal 1rem/2.5 "Source Sans Pro", Helvetica, Arial, sans-serif !important;
-  padding: 0 0.75em;
   color: #eef !important;
   text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.25);
   text-decoration: none !important;
+}
+header nav ul a {
+  padding: 0 0.75em;
 }
 nav a:hover {
   color: #fff !important;
@@ -172,11 +177,6 @@ sup {
 .fullscreen > .fullscreen,
 section.mainscreen {
   background: #fff;
-}
-.fullscreen > .fullscreen > *,
-.mainscreen > * {
-  margin-right: 40px;
-  margin-left: 40px;
 }
 section a {
   color: #369;
