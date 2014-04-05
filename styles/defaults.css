@@ -324,6 +324,11 @@ th {
   }
 }
 
+@media (max-width:96rem) {
+  .fullscreen {
+    padding:0 .75rem;
+  }
+}
 @media (min-width: 1020px) {
   .fullscreen {
     /* width should be evenly divisible by 4rem */
