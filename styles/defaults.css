@@ -48,7 +48,7 @@ nav {
   line-height: 2.5;
 }
 nav a.home {
-  margin:0 1.5rem;
+  margin-right:1.5rem;
 }
 nav img {
   vertical-align: middle;
@@ -268,7 +268,6 @@ th {
   max-height: 50em;
 }
 @media (max-width:640px) {
-
   #mainmenu-toggle-overlay {
     background: #4F5B93 url(//php.net/images/mobile-menu.png) no-repeat center center;
     float: right;
@@ -318,6 +317,7 @@ th {
     max-width: 100%;
   }
 }
+
 @media (min-width: 641px) {
   img {
     max-width: 100%
@@ -326,7 +326,11 @@ th {
     padding:0 .75rem;
   }
 }
+
 @media (min-width: 1020px) {
+  nav a.home {
+    margin-left:1.5rem;
+  }
   .fullscreen {
     /* width should be evenly divisible by 4rem */
     max-width: 96rem;
