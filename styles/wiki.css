@@ -651,7 +651,6 @@ body {
 .dokuwiki #admin__version {
     clear: left;
     float: right;
-    color: @ini_text_neu;
     background-color: inherit;
 }
 [dir=rtl] .dokuwiki #admin__version {
@@ -957,7 +956,7 @@ ul .level1, ul .level2, ul .level3 {
 }
 @media (max-width:640px) {
 	#dokuwiki__pagetools ul {
-		display: hidden;
+		display: none;
 	}
 	#dokuwiki__site {
 		margin: 0px;
