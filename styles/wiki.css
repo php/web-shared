@@ -738,8 +738,7 @@ pre.code {
 
 /* Other code fragments */
 .code .br0 {
-	background-color:	inherit;
-	color:	#369;
+  color:#3e999f;
 }
 .code .co1,
 .code .co2,
@@ -759,8 +758,7 @@ pre.code {
 .code .co1,
 .code .co2,
 .code .coMULTI {
-	background-color:	inherit;
-	color:		#666;
+  color: #718c00;
 }
 .code .es0 {
 	background-color:	inherit;
@@ -771,20 +769,16 @@ pre.code {
 	color:		#909;
 }
 .code .kw1 {
-	background-color:	inherit;
-	color:		#903;
+  color: #c82829;
 }
 .code .kw2 {
-	background-color:	inherit;
-	color:		#036;
+  color: #4271ae;
 }
 .code .kw3 {
-	background-color:	inherit;
-	color:		#309;
+  color: #8959a8;
 }
 .code .kw4 {
-	background-color:	inherit;
-	color:		#933;
+  color: #eab700;
 }
 .code .kw5 {
 	background-color:	inherit;
@@ -800,12 +794,10 @@ pre.code {
 	color:		#060;
 }
 .code .nu0 {
-	background-color:	inherit;
-	color:		#939;
+  color: #eab700;
 }
 .code .re0 {
-	background-color:	inherit;
-	color:		#606;
+  color: #8959a8;
 }
 .code .re1 {
 	background-color:	inherit;
@@ -842,8 +834,7 @@ pre.code {
 	color:		#900;
 }
 .code .sy0 {
-	background-color:	inherit;
-	color:		#6c6;
+  color: #3e999f;
 }
 
 /*	Footer/header related settings.
