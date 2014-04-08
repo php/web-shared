@@ -129,6 +129,7 @@ body {
   position:relative;
   border-radius:0;
   font-size:1.125rem;
+  color:#333;
 }
 #dw__toc > h3 > strong {
   position: absolute;
@@ -1014,7 +1015,7 @@ h6:after {
   content:" ";
   width:100%;
   margin-top:-1px;
-  border-bottom:1px solid;
+  border-bottom:1px dotted;
 }
 h1 {
   font-size:1.75rem;
