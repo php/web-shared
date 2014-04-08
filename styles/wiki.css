@@ -88,6 +88,7 @@ body {
   text-decoration: none;
   color: #333;
   border-bottom: 1px dotted #999;
+  margin-bottom:-1px;
   text-decoration: none;
 }
 #dw__toc a:hover,
@@ -124,9 +125,10 @@ body {
   border-top:0;
   border-right:0;
   border-bottom:0;
-  padding:.75rem 1.5rem .5rem;
+  padding:.0 1.5rem;
   position:relative;
   border-radius:0;
+  font-size:1.125rem;
 }
 #dw__toc > h3 > strong {
   position: absolute;
@@ -705,13 +707,13 @@ div.code pre.codeShown{display:block;}
 
 pre,
 code {
-  font: normal .875rem/1.46 "Source Code Pro", "Courier New", Courier, monospace;
+  font: normal .875rem/1.5rem "Source Code Pro", "Courier New", Courier, monospace;
 }
 pre.code {
   background: #fff;
-  border: 1px solid #D9D9D9;
+  box-shadow:inset 0 0 1px #ccc;
   color: #333;
-  margin: 0 0 .75rem;
+  margin: 0 0 1.5rem;
   padding: .75rem;
   overflow: auto;
   max-height: 50em;
@@ -970,7 +972,7 @@ ul .level1, ul .level2, ul .level3 {
   border: 0;
 }
 #breadcrumbs + .mainscreen {
-  padding-top:1rem;
+  padding-top:1.5rem;
 }
 div.footnotes {
   border-top:1px dotted #669;
@@ -981,14 +983,6 @@ div.footnotes {
 
 /* {{{ Spacing of Wiki Sections */
 /* If DokuWiki nested sections properly this would be much cleaner */
-h1 + .level1,
-h2 + .level2,
-h3 + .level3,
-h4 + .level4,
-h5 + .level5,
-h6 + .level6 {
-  margin-bottom:1.5rem;
-}
 h3, h3 + .level3 {
   margin-left:1.5rem;
 }
@@ -1001,12 +995,40 @@ h5, h5 + .level5 {
 h6, h6 + .level6 {
   margin-left:6rem;
 }
-h1 + .level1 > :last-child,
-h2 + .level2 > :last-child,
-h3 + .level3 > :last-child,
-h4 + .level4 > :last-child,
-h5 + .level5 > :last-child,
-h6 + .level6 > :last-child {
-  margin-bottom:0;
+h1, h2, h3, h4, h5, h6 {
+  line-height:3rem;
+  background:none;
+  border-top:0;
+  border-bottom:0;
+  padding:0;
+  margin-bottom:1.5rem;
+}
+h1:after,
+h2:after,
+h3:after,
+h4:after,
+h5:after,
+h6:after {
+  display:table;
+  content:" ";
+  width:100%;
+  margin-top:-1px;
+  border-bottom:1px solid;
+}
+h1 {
+  font-size:1.75rem;
+}
+h2 {
+  font-size:1.5rem;
+}
+h3 {
+  font-size:1.25rem;
+}
+p, ol, ul {
+  margin-bottom:1.5rem;
+}
+p code,
+li code {
+  line-height:1.375rem;
 }
 /* }}} */
