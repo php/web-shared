@@ -174,7 +174,7 @@ hr {
 hr:before {
   display:block;
   content:" ";
-  border-bottom:1px dotted #999;
+  border-bottom:1px dotted #ccc;
   padding: .75rem 0 0 ;
 }
 /* }}} */
