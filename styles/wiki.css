@@ -205,7 +205,7 @@ body {
 }
 #dokuwiki__pagetools {
   position: absolute;
-  right: -40px;
+  right: -44px;
   /* on same vertical level as first headline, because .page has 2em padding */
   top: 0;
   width: 40px;
@@ -928,7 +928,7 @@ div.code pre.codeShown {
 	margin: 0;
 }
 #dokuwiki__site {
-	margin: 0 40px 0 1.5rem;
+	margin: 0 3rem 0 1.5rem;
 }
 #dokuwiki__site > .site {
 	padding: 0;
