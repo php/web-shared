@@ -279,7 +279,7 @@ th {
   /* This just has to be big enough to cover whatever's in nav. */
   max-height: 50em;
 }
-@media (max-width:640px) {
+@media (max-width:40rem) {
   #mainmenu-toggle-overlay {
     background: #4F5B93 url(//php.net/images/mobile-menu.png) no-repeat center center;
     float: right;
@@ -309,7 +309,9 @@ th {
     overflow-y: auto;
     clear: both;
   }
-  nav ul, nav li, nav a {
+  header nav ul,
+  header nav li,
+  header nav a {
     display: block;
     text-align: center;
   }
@@ -330,7 +332,7 @@ th {
   }
 }
 
-@media (min-width: 641px) {
+@media (min-width: 40rem) {
   img {
     max-width: 100%
   }
@@ -339,7 +341,7 @@ th {
   }
 }
 
-@media (min-width: 1020px) {
+@media (min-width: 48rem) {
   nav a.home {
     margin-left:1.5rem;
   }
