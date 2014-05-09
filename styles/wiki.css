@@ -9,7 +9,7 @@ body {
 }
 #dokuwiki__site {
   max-width: 75em;
-  padding: 1.5rem 3rem 1.5rem 1.5rem;
+  padding-right: 1.5rem;
 }
 #dokuwiki__site > .site {
   padding: 0 .5em;
@@ -997,7 +997,6 @@ h1, h2, h3, h4, h5, h6 {
   border-top:0;
   border-bottom:0;
   padding:0;
-  margin-bottom:1.5rem;
   color:#793862;
 }
 h1:after,
@@ -1026,9 +1025,6 @@ h4 {
 }
 h5, h6 {
   font-size:1rem;
-}
-p, ol, ul {
-  margin-bottom:1.5rem;
 }
 p code,
 li code {

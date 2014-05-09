@@ -115,7 +115,7 @@ h1, h2, h3, h4, h5, h6, dt {
   border-bottom: 1px solid #C4C9DF;
   border-radius: 0 0 2px 2px;
   line-height: 1.5rem;
-  margin:0 0 .75rem;
+  margin:0 0 1.5rem;
 }
 h1 {
   font-size: 1.5rem;
@@ -139,10 +139,10 @@ dd {
   padding: 0.5em .444444444em !important;
 }
 p {
-  margin: 0 0 .75rem;
+  margin: 0 0 1.5rem;
 }
 ul, ol {
-  margin: 0 0 .75rem;
+  margin: 0 0 1.5rem;
   padding:0 0 0 2.5rem;
 }
 .clearfix:before,
@@ -185,6 +185,9 @@ hr:before {
 .mainscreen,
 .secondscreen {
   box-sizing:border-box;
+}
+body > section.fullscreen > section.mainscreen {
+  padding:1.5rem 1.5rem 0;
 }
 .fullscreen > .fullscreen,
 section.mainscreen {
