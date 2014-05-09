@@ -84,7 +84,7 @@ endforeach
 <nav id="megadropdown"></nav>
 
 <section class="fullscreen clearfix">
-
+  <section class="mainscreen">
 
 <?php /* vim: set ft=html et ts=2 sw=2: : */ ?>
 

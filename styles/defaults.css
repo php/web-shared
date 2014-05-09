@@ -189,6 +189,9 @@ hr:before {
 body > section.fullscreen > section.mainscreen {
   padding:1.5rem 1.5rem 0;
 }
+body > section.fullscreen > section.mainscreen:only-child {
+  width:100%;
+}
 .fullscreen > .fullscreen,
 section.mainscreen {
   background: #fff;

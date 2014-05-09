@@ -12,7 +12,7 @@ isset($JS) || $JS = array();
 isset($SECONDSCREEN) || $SECONDSCREEN = "";
 $ROOT = substr($_SERVER["SERVER_NAME"], -8) == ".php.net" ? "//shared.php.net" : "/shared";
 ?>
-
+</section> <!-- .mainscreen -->
 <?php if ($SECONDSCREEN): ?>
 <section class="secondscreen">
   <?=$SECONDSCREEN?>
