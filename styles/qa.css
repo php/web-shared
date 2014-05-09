@@ -1,22 +1,23 @@
-header {
+body > header {
   border-bottom: 0.25em solid #ff9900;
   background-color: #ffcc66;
 }
-footer {
+body > header nav a:link,
+body > header nav a:visited {
+  color: #8C5D00;
+}
+body > header nav a:focus,
+body > header nav a:hover {
+  color:#D18B00;
+}
+body > footer {
   border-top: .25em solid #ff9900;
 }
 
-nav a {
-  color: #555555 !important;
-}
-
-nav a:hover {
-  color: #000000 !important;
-}
-
 h1, h2, h3, h4, h5, h6 {
+  border-color: #ffcc66;
   border-top-color: #ff9900;
-  border-bottom-color: #ffcc66;
+  background-color:#FFE4AE;
 }
 .mainscreen {
   border-color: #ffcc66;

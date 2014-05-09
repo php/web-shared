@@ -39,9 +39,10 @@ header {
   box-shadow: 0 .25em .25em rgba(0,0,0,.1);
   z-index: 1;
 }
-footer {
+
+body > footer {
   border-top: .25em solid #8892BF;
-  background-color: #333 !important;
+  background-color: #333;
   width: 100%;
 }
 nav {
@@ -63,18 +64,17 @@ nav ul {
 nav li {
   display: inline-block;
 }
-header nav a {
+body > header nav a {
   display: inline-block;
-  font: normal 1rem/2.5 "Source Sans Pro", Helvetica, Arial, sans-serif !important;
-  color: #E2E4EF !important;
+  color: #E2E4EF;
   text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.25);
-  text-decoration: none !important;
+  text-decoration: none;
 }
 header nav ul a {
   padding: 0 0.75em;
 }
 nav a:hover {
-  color: #fff !important;
+  color: #fff;
 }
 nav form {
   display: inline-block;
