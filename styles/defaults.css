@@ -64,7 +64,8 @@ nav ul {
 nav li {
   display: inline-block;
 }
-body > header nav a {
+body > header nav a:link,
+body > header nav a:visited {
   display: inline-block;
   color: #E2E4EF;
   text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.25);
