@@ -1031,3 +1031,7 @@ li code {
   line-height:1.375rem;
 }
 /* }}} */
+
+.revision_desc {
+  font-style: italic;
+}
