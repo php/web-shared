@@ -5,7 +5,7 @@
  */
 body {
   margin: 0 auto;
-  font: normal 1em/1.5 "Source Sans Pro", Helvetica, Arial, sans-serif;
+  font: normal 1em/1.5em "Source Sans Pro", Helvetica, Arial, sans-serif;
 }
 #dokuwiki__site {
   max-width: 75em;
