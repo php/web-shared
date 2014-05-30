@@ -67,6 +67,18 @@ body {
   margin-left: 0;
   margin-right: 16em;
 }
+
+/* Make the font-size of the first paragraph in the Introduction section
+ * a bit larger if the paragraph is the first child of the introduction.
+ * Technically dokuwiki puts the content in a div immediately after the
+ * header; hence the strange rule.
+ *
+ * Hopefully this encourages RFC authors to write better introductions.
+ */
+#dokuwiki__content #introduction + div > p:first-child {
+  font-size:1.125em;
+}
+
 #dokuwiki__footer {
   clear: both;
 }
@@ -1035,3 +1047,4 @@ li code {
 .revision_desc {
   font-style: italic;
 }
+
