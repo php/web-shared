@@ -1,16 +1,16 @@
-body > header {
+body header {
   border-bottom: 0.25em solid #ff9900;
   background-color: #ffcc66;
 }
-body > header nav a:link,
-body > header nav a:visited {
+body header nav a:link,
+body header nav a:visited {
   color: #8C5D00;
 }
-body > header nav a:focus,
-body > header nav a:hover {
+body header nav a:focus,
+body header nav a:hover {
   color:#D18B00;
 }
-body > footer {
+body footer {
   border-top: .25em solid #ff9900;
 }
 
