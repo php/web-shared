@@ -58,6 +58,30 @@ footer {
 }
 
 /* {{{ Responsive parts */
+@media (max-width: 48rem) {
+  section.fullscreen .secondscreen {
+    /*display: none;*/
+    padding: 1.5rem;
+    border-top: 1px solid #f0f0f0;
+  }
+  .profile-side > div {
+    float: left;
+    width: 100px;
+  }
+  .profile-side > ul {
+    float: left;
+  }
+  .profile-side img {
+    width: 80px;
+    height: 80px;
+  }
+  .profile-details {
+    margin: 0;
+  }
+  .profile-main > h2 {
+    margin-top: 1rem;
+  }
+}
 @media (min-width: 48rem) {
   .fullscreen {
     width: 48rem;
