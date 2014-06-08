@@ -43,6 +43,7 @@ foreach ($scripts as $script):
     echo "<script src='{$ROOT}{$script}?filemtime=$filemtime'></script>\n";
   }
 endforeach ?>
+</div><!-- .wrap -->
 </body>
 </html>
 <?php /* vim: set ft=html et ts=2 sw=2: : */ ?>

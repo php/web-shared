@@ -56,6 +56,7 @@ endforeach
 </head>
 <body id="<?=$SUBDOMAIN?>">
 
+<div class="wrap">
 <header class='clearfix'>
   <div id="mainmenu-toggle-overlay"></div>
   <input type="checkbox" id="mainmenu-toggle">
