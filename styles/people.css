@@ -1,0 +1,149 @@
+/* {{{ General overrides */
+body {
+  background: #f2f4f6;
+}
+header {
+  border-bottom: none;
+  box-shadow: none;
+}
+footer {
+  border-top: none;
+}
+/* }}} */
+
+/* {{{ Sidebar: avatar and information */
+.profile-side img {
+  border-radius: .5rem;
+}
+.profile-details {
+  list-style-type: none;
+  margin: 1rem 0;
+  padding: 0;
+}
+.profile-details [class^="icon-"]:before,
+.profile-details [class*=" icon-"]:before {
+  position: relative;
+  top: .2rem;
+  color: #ccc;
+  padding-right: .2rem;
+}
+/* }}} */
+
+/* {{{ Main Profile */
+.profile-name h1,
+.profile-name h2 {
+  background: transparent;
+  padding: 0;
+  border: 0;
+  margin: 0;
+  font-size: 2rem;
+  line-height: 2rem;
+  width: 100%;
+}
+.profile-name h2 {
+  font-size: 1.25rem;
+  font-style: normal;
+  font-weight: 300;
+  line-height: 2rem;
+  color: #666;
+}
+/* }}} */
+
+.profile-main > h2 {
+  background: transparent;
+  margin-bottom: 0;
+  border: none;
+  padding: 0;
+  margin-top: 2rem;
+}
+
+/* {{{ Responsive parts */
+@media (min-width: 48rem) {
+  .fullscreen {
+    width: 48rem;
+    padding: 0;
+  }
+  section.fullscreen .mainscreen {
+    padding: 20px;
+    margin-left: -260px;
+    float: right;
+  }
+  section.fullscreen .secondscreen {
+    width: 280px;
+    padding: 20px;
+    float: left;
+  }
+}
+@media (min-width: 66rem) {
+  .fullscreen {
+    width: 60rem;
+  }
+}
+/* }}} */
+
+/* {{{ Font icons */
+@charset "UTF-8";
+@font-face {
+  font-family: "people";
+  src: url("../fonts/people.eot");
+  src: url("../fonts/people.eot?#iefix") format("embedded-opentype"),
+       url("../fonts/people.woff") format("woff"),
+       url("../fonts/people.ttf") format("truetype"),
+       url("../fonts/people.svg#people") format("svg");
+  font-weight: normal;
+  font-style: normal;
+}
+[class^="icon-"]:before,
+[class*=" icon-"]:before {
+  font-family: "people" !important;
+  font-style: normal !important;
+  font-weight: normal !important;
+  font-variant: normal !important;
+  text-transform: none !important;
+  speak: none;
+  line-height: 1;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+.icon-mail:before {
+  content: "\e000";
+}
+.icon-link:before {
+  content: "\e001";
+}
+.icon-location:before {
+  content: "\e002";
+}
+.icon-work:before {
+  content: "\e003";
+}
+.icon-bug:before {
+  content: "\e004";
+}
+.icon-edit:before {
+  content: "\e005";
+}
+/* }}} */
+
+/* {{{ Sticky footer */
+html, body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}
+.wrap {
+  display: table;
+  height: 100%;
+  width: 100%;
+}
+.wrap > section.fullscreen {
+  background: #fff;
+  height: 100%;
+}
+footer {
+  display: table-row;
+  height: 1px;
+}
+/* }}} */
+
+/* vim: set expandtab shiftwidth=2 softtabstop=2 tabstop=2 fdm=marker : */
