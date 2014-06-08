@@ -65,18 +65,29 @@ footer {
   }
   section.fullscreen .mainscreen {
     padding: 20px;
-    margin-left: -260px;
+    margin-left: -280px;
     float: right;
   }
   section.fullscreen .secondscreen {
-    width: 280px;
+    width: 230px;
     padding: 20px;
     float: left;
+  }
+  .profile-side img {
+    width: 180px;
+    height: 180px;
   }
 }
 @media (min-width: 66rem) {
   .fullscreen {
     width: 60rem;
+  }
+  section.fullscreen .secondscreen {
+    width: 280px;
+  }
+  .profile-side img {
+    width: 230px;
+    height: 230px;
   }
 }
 /* }}} */
