@@ -47,7 +47,7 @@ foreach($styles as $style):
 endforeach
 ?>
 
-  <link href="//fonts.googleapis.com/css?family=Source+Sans+Pro:400,600,400italic,600italic|Source+Code+Pro&amp;subset=latin,latin-ext" rel="stylesheet">
+  <link href="//fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,600,400italic,600italic|Source+Code+Pro&amp;subset=latin,latin-ext" rel="stylesheet">
   <link rel="shortcut icon" href="//php.net/favicon.ico">
 <!--[if lt IE 9]>
   <script src="//shared.php.net/js/html5shiv.js"></script>
