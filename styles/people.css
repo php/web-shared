@@ -3,11 +3,10 @@ body {
   background: #f2f4f6;
 }
 header {
-  border-bottom: none;
   box-shadow: none;
 }
 footer {
-  border-top: none;
+  outline: .25em solid #8892BF;
 }
 /* }}} */
 
