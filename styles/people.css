@@ -11,6 +11,52 @@ footer {
 }
 /* }}} */
 
+/* {{{ Users List: */
+.twrapper {
+  padding: 15px 0;
+  background: #F2F4F6;
+}
+table {
+  padding-right: 0;
+  box-shadow: 0 0 1px #4F5B93;
+}
+th {
+  text-align: left;
+}
+th:first-child {
+  width: 32px;
+}
+table .gravatar img {
+  display: block;
+  height: 32px;
+  width: 32px;
+  border-radius: 3px;
+}
+a.pagination {
+  color: white;
+  border-bottom: none;
+}
+a.pagination:hover {
+  color: #4F5B93;
+}
+a.pagination.next {
+  float: right;
+}
+a.pagination.prev {
+  float: left;
+}
+tfoot th {
+  text-align: center;
+}
+table .username a {
+  display: block;
+  border-bottom: none;
+}
+span.page {
+  color: white;
+}
+/* }}} */
+
 /* {{{ Sidebar: avatar and information */
 .profile-side img {
   border-radius: .5rem;
