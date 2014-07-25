@@ -31,7 +31,7 @@ $ROOT = substr($_SERVER["SERVER_NAME"], -8) == ".php.net" ? "//shared.php.net" :
 <?php
 $current_time = time();
 $scripts = array_merge(array(
-  '//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js',
+  '//ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js',
   '/js/external/mousetrap.min.js',
   '/js/common.js'
 ), $JS);
