@@ -1,0 +1,62 @@
+body {
+  font: normal 1em/1.5em "Source Sans Pro", Helvetica, Arial, sans-serif;
+}
+
+.mainscreen table {
+  margin-bottom: 1.5rem;
+}
+
+/* Sidebar styling. Mostly stolen wholesale from the Wiki TOC styling. */
+.secondscreen div,
+.secondscreen p,
+.secondscreen ul {
+	background-color: #E6E6E6;
+  font-size: 0.875rem;
+  margin: 0;
+  padding: 0 1.5rem 1.5rem;
+}
+
+.secondscreen h1,
+.secondscreen h2,
+.secondscreen h3,
+.secondscreen h4,
+.secondscreen h5,
+.secondscreen h6 {
+  border: 0;
+  line-height: 2.67;
+  padding: 0 1.5rem 0;
+}
+
+.secondscreen ul,
+.secondscreen ul li {
+  list-style: none;
+}
+
+.secondscreen ul li:first-child {
+  border-top: 1px dotted #999;
+}
+
+.secondscreen ul li {
+  padding: 0;
+  margin: 0;
+  line-height: 1.5rem;
+  border-bottom: 1px dotted #999;
+}
+
+.secondscreen a {
+  color: #333;
+  border-bottom: 1px dotted #999;
+}
+
+.secondscreen li a {
+  border-bottom: 0;
+}
+
+.secondscreen a:hover,
+.secondscreen a:focus {
+  color:#693;
+  border-color:#693;
+  outline:none;
+}
+
+/* vim: set expandtab shiftwidth=2 softtabstop=2 tabstop=2 fdm=marker : */
