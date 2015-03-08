@@ -24,3 +24,9 @@ time.gen-date {
   font-size:0.8rem;
   display:block;
 }
+
+.version h3 .releasedate {
+  float:right;
+  font-weight:normal;
+  color:#666;
+}
