@@ -1048,3 +1048,36 @@ li code {
   font-style: italic;
 }
 
+/* messages with msg() */
+
+div.error,
+div.info,
+div.success,
+div.notify {
+    color: #000;
+    border: 1px solid;
+    font-size: 90%;
+    margin: 0 0 0.5em;
+    padding: 0.4em;
+    overflow: hidden;
+    border-radius: 5px;
+}
+div.error {
+    background-color: #fcc;
+    border-color: #ebb;
+}
+
+div.info {
+    background-color: #ccf;
+    border-color: #bbe;
+}
+
+div.success {
+    background-color: #cfc;
+    border-color: #beb;
+}
+
+div.notify {
+    background-color: #ffc;
+    border-color: #eeb;
+}
