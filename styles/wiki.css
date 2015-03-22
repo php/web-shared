@@ -971,6 +971,9 @@ ul .level1, ul .level2, ul .level3 {
   border-bottom:1px solid #CCC;
   padding: 0 1.5rem;
 }
+#breadcrumbs .bchead {
+  display: none;
+}
 #breadcrumbs ol {
   margin: 0;
   padding:0;
