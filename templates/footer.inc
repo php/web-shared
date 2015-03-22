@@ -6,6 +6,9 @@
  *
  *   // Relative to /share, or prefixed with // for external js
  *   $JS = array("//example.com/external.js", "/js/local.js");
+ *
+ *   or, to avoid including the common JS altogether:
+ *   $JS = false;
  */
 
 isset($JS) || $JS = array();
@@ -29,20 +32,22 @@ $ROOT = substr($_SERVER["SERVER_NAME"], -8) == ".php.net" ? "//shared.php.net" :
 </footer>
 
 <?php
-$current_time = time();
-$scripts = array_merge(array(
-  '//ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js',
-  '/js/external/mousetrap.min.js',
-  '/js/common.js'
-), $JS);
-foreach ($scripts as $script):
-  if (strncmp($script, "//", 2) == 0) {
-    echo "<script src='$script'></script>\n";
-  } else { 
-    $filemtime = filemtime(__DIR__ . "/..{$script}") ?: $current_time;
-    echo "<script src='{$ROOT}{$script}?filemtime=$filemtime'></script>\n";
-  }
-endforeach ?>
+if ($JS !== false) {
+  $current_time = time();
+  $scripts = array_merge(array(
+    '//ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js',
+    '/js/external/mousetrap.min.js',
+    '/js/common.js'
+  ), $JS);
+  foreach ($scripts as $script):
+    if (strncmp($script, "//", 2) == 0) {
+      echo "<script src='$script'></script>\n";
+    } else {
+      $filemtime = filemtime(__DIR__ . "/..{$script}") ?: $current_time;
+      echo "<script src='{$ROOT}{$script}?filemtime=$filemtime'></script>\n";
+    }
+  endforeach;
+} ?>
 </div><!-- .wrap -->
 </body>
 </html>
