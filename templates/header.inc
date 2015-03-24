@@ -7,9 +7,10 @@
  *   $TITLE     = "Awesome Website"; // Page title
  *   $SUBDOMAIN = "people"; // Subdomain/Project
  *   $LINKS     = array(
- *   $HEAD_RAND = ""; // Random extra values needed for in <head>
  *                  array("href" => "/link.php", "text" => "Link text")
  *                ); // Menu menu links
+ *   $HEAD_WIKI = ""; // DokuWiki's extra <head> elements
+ *   $HEAD_RAND = ""; // Random extra values needed for in <head>
  *   $CSS       = array("/styles/local.css"); // (relative to /shared)
  *   $SEARCH    = array(
  *                  "method"      => "get",
@@ -22,6 +23,7 @@
 isset($TITLE)     || $TITLE     = "Hypertext Preprocessor";
 isset($SUBDOMAIN) || $SUBDOMAIN = "";
 isset($LINKS)     || $LINKS     = array();
+isset($HEAD_WIKI) || $HEAD_WIKI = "";
 isset($HEAD_RAND) || $HEAD_RAND = "";
 isset($CSS)       || $CSS       = array();
 isset($SEARCH)    || $SEARCH    = array();
@@ -36,6 +38,7 @@ $current_time = time();
 
   <title>PHP: <?=$TITLE ?></title>
 
+  <?=$HEAD_WIKI ?>
 <?php
 $styles = array_merge(array(
   '/styles/defaults.css'
