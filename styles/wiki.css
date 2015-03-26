@@ -1013,6 +1013,7 @@ h1, h2, h3, h4, h5, h6 {
   border-bottom:0;
   padding:0;
   color:#793862;
+  margin-left: 0;
 }
 h1:after,
 h2:after,
