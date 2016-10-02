@@ -33,4 +33,17 @@ h1, h2, h3, h4, h5, h6 {
   }
 }
 
+tbody tr:nth-child(odd) {
+  background-color: #ffcc66;
+}
+tbody tr:nth-child(even) {
+  background-color: #FFE4AE;
+}
+tbody tr:nth-child(4n+1) {
+  background-color: #ff9900;
+}
+tbody td a {
+  color: #000000 !important;
+}
+
 /* vim: set expandtab shiftwidth=2 softtabstop=2 tabstop=2 fdm=marker : */
