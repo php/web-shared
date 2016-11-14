@@ -1063,3 +1063,13 @@ div.table {
 form[name=doodle__form] td.rightalign {
   text-align: left;
 }
+
+#dokuwiki__site blockquote {
+  padding:1.5rem;
+  margin:1.5rem 0;
+  background:#E6E6E6;
+}
+
+#dokuwiki__site blockquote p:last-child {
+  margin-bottom:0;
+}
