@@ -24,7 +24,7 @@ $ROOT = substr($_SERVER["SERVER_NAME"], -8) == ".php.net" ? "//shared.php.net" :
 <footer>
   <nav class="fullscreen">
     <ul>
-      <li><a href="//php.net/copyright">Copyright &copy; 2001-2016 The PHP Group</a></li>
+      <li><a href="//php.net/copyright">Copyright © 2001-<?php echo date('y'); ?> The PHP Group</a></li>
       <li><a href="//php.net/sites">Other PHP.net sites</a></li>
       <li><a href="//php.net/privacy">Privacy policy</a></li>
     </ul>
