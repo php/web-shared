@@ -204,6 +204,7 @@ span.page {
 
 /* {{{ Sticky footer */
 html, body {
+  height: 100%;
   margin: 0;
   padding: 0;
 }
@@ -220,7 +221,11 @@ footer {
   display: table-row;
   height: 1px;
   border: 0;
-  box-shadow: 0 0.25em 0 #8892BF inset;
+  box-shadow: 0 0.25em 0 #8892BF inset, 0 0.25em 0 #333;
+}
+footer nav.fullscreen {
+  background: #333;
+  box-shadow: 0 0.25em 0 #8892BF inset, 0 0.25em 0 #333;
 }
 /* }}} */
 
