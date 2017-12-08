@@ -49,17 +49,23 @@ nav#resources a {
 #users th {
   border-bottom: 2px solid #6678b1;
 }
-#users tbody td:nth-of-type(1) {
-  width: 150px;
+#users tbody th:nth-of-type(1),
+#users tbody td:nth-of-type(1){
   text-align: center;
 }
-#users tbody td:nth-of-type(3) {
-  width: 30%;
-}
 #users tbody td:nth-of-type(4) {
-  width: 150px;
+  width: 25%;
+}
+#users tbody th {
+  text-align: left;
 }
 
+
+#users tfoot td:nth-of-type(1),
+#users thead td:nth-of-type(1) {
+  text-align: left;
+  width: 150px;
+}
 #users tfoot td:nth-of-type(2),
 #users thead td:nth-of-type(2) {
   text-align: center;
@@ -67,6 +73,7 @@ nav#resources a {
 #users tfoot td:nth-of-type(3),
 #users thead td:nth-of-type(3) {
   text-align: right;
+  width: 150px;
 }
 .useredit th:nth-of-type(1) {
   text-align: right;
