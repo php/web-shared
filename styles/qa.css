@@ -46,4 +46,17 @@ tbody td a {
   color: #000000 !important;
 }
 
+dl a,
+dl a:link,
+dl a:visited {
+  color: #6baae8;
+  text-decoration: none;
+  border: 0;
+}
+
+dl a:hover {
+  color: #693;
+  text-decoration: underline;
+}
+
 /* vim: set expandtab shiftwidth=2 softtabstop=2 tabstop=2 fdm=marker : */
