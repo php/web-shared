@@ -224,6 +224,9 @@ footer {
   display: table-row;
   height: 1px;
 }
+footer nav.fullscreen {
+  background: #333;
+}
 /* }}} */
 
 /* vim: set expandtab shiftwidth=2 softtabstop=2 tabstop=2 fdm=marker : */
