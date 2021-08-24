@@ -1055,10 +1055,6 @@ li code {
   vertical-align: baseline;
 }
 
-div.table {
-  overflow-x: scroll;
-}
-
 form[name=doodle__form] td.rightalign {
   text-align: left;
 }
