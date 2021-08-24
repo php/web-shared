@@ -227,7 +227,6 @@ section.fullscreen .current:before {
 table {
   border-spacing: 0;
   width: 100%;
-  padding-right: 80px;
 }
 tbody tr:nth-child(odd) {
   background-color: #bbd;
