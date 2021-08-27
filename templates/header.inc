@@ -50,7 +50,7 @@ foreach($styles as $style):
 endforeach
 ?>
 
-  <link href="//fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,600,400italic,600italic|Source+Code+Pro&amp;subset=latin,latin-ext" rel="stylesheet">
+  <link href="//fonts.googleapis.com/css?family=Fira+Sans|Source+Sans+Pro:300,400,600,400italic,600italic|Source+Code+Pro&amp;subset=latin,latin-ext" rel="stylesheet">
   <link rel="shortcut icon" href="//php.net/favicon.ico">
 <!--[if lt IE 9]>
   <script src="//shared.php.net/js/html5shiv.js"></script>
@@ -90,4 +90,3 @@ endforeach
 <section class="fullscreen clearfix">
 
 <?php /* vim: set ft=html et ts=2 sw=2: : */ ?>
-

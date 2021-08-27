@@ -5,8 +5,22 @@
  */
 body {
   margin: 0 auto;
-  font: normal 1em/1.5em "Source Sans Pro", Helvetica, Arial, sans-serif;
+  font: normal 1em/1.5em "Fira Sans", "Source Sans Pro", Helvetica, Arial, sans-serif;
+  background: #333 url('../images/bg-texture-00.svg');
 }
+
+body footer {
+    border-top: 0;
+    background-color: transparent;
+}
+
+@media (min-width: 48rem) {
+  #breadcrumbs {
+    box-sizing: border-box;
+    width: 73.4375%;
+  }
+}
+
 #dokuwiki__site {
   max-width: 75em;
   padding-right: 1.5rem;
@@ -98,22 +112,24 @@ body {
 #dw__toc a {
   display: block;
   text-decoration: none;
-  color: #333;
-  border-bottom: 1px dotted #999;
+  border-bottom: 1px dotted #666;
   margin-bottom:-1px;
+  padding-left: .75rem;
   text-decoration: none;
+  color: #ccc;
+  position: relative;
 }
 #dw__toc a:hover,
 #dw__toc a:focus {
-  color:#693;
-  border-color:#693;
+  color: #AE508D;
+  border-color: #666;
   outline:none;
 }
 #dw__toc a:hover:before,
 #dw__toc a:focus:before {
   content: "\bb \20";
-  position:absolute;
-  margin-left:-1em;
+  position: absolute;
+  left: 0;
 }
 
 
@@ -134,18 +150,20 @@ body {
 
 /*____________ toc list ____________*/
 #dw__toc h3 {
-  border-top:0;
-  border-right:0;
-  border-bottom:0;
+  border: 0;
   padding:.0 1.5rem;
   position:relative;
   border-radius:0;
   font-size:1.125rem;
-  color:#333;
+  color:#ccc;
+  background-color: transparent;
+  pointer-events: none;
+}
+#dw__toc h3:after {
+  border-color: #666;
 }
 #dw__toc > h3 > strong {
-  position: absolute;
-  margin-left:-.75em
+  display: none; /* no need for collapsing */
 }
 #dw__toc > div {
     padding: 0 1.5rem 1.5rem;
@@ -935,8 +953,6 @@ div.code pre.codeShown {
 	display: none;
 }
 .secondscreen > div > div {
-	background-color: #E6E6E6;
-	border-left: 1px solid #CCC;
 	margin: 0;
 }
 #dokuwiki__site > .site {
