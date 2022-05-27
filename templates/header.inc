@@ -70,7 +70,7 @@ endforeach
       <a href="/" class="home"><img src="//php.net/images/logo.php?<?=$SUBDOMAIN?>" width="48" height="24" alt="php"><span class="subdomain"><?=$SUBDOMAIN?></span></a>
       <ul>
 <?php foreach($LINKS as $link): ?>
-        <li><a class="<?php echo $CURRENT_PAGE == $link["text"] ? "active" : ""?>" href="<?=$link["href"]?>"><?=$link["text"]?></a></li>
+        <li class="<?php echo $CURRENT_PAGE == $link["text"] ? "active" : ""?>"><a href="<?=$link["href"]?>"><?=$link["text"]?></a></li>
 <?php endforeach ?>
       </ul>
     </div>
