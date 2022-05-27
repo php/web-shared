@@ -19,6 +19,7 @@
  *                  "name"        => "input-name",
  *                  "hidden"      => array(array("name" => "hidden-input-name", "value" => "hidden-input-value")),
  *                ); // Search box, if any
+ *   $CURRENT_PAGE // The current page
  */
 isset($TITLE)     || $TITLE     = "Hypertext Preprocessor";
 isset($SUBDOMAIN) || $SUBDOMAIN = "";
@@ -27,6 +28,7 @@ isset($HEAD_WIKI) || $HEAD_WIKI = "";
 isset($HEAD_RAND) || $HEAD_RAND = "";
 isset($CSS)       || $CSS       = array();
 isset($SEARCH)    || $SEARCH    = array();
+isset($CURRENT_PAGE)    || $CURRENT_PAGE   = "";
 $ROOT = substr($_SERVER["SERVER_NAME"], -8) == ".php.net" ? "//shared.php.net" : "/shared";
 $current_time = time();
 ?>
@@ -68,7 +70,7 @@ endforeach
       <a href="/" class="home"><img src="//php.net/images/logo.php?<?=$SUBDOMAIN?>" width="48" height="24" alt="php"><span class="subdomain"><?=$SUBDOMAIN?></span></a>
       <ul>
 <?php foreach($LINKS as $link): ?>
-        <li><a href="<?=$link["href"]?>"><?=$link["text"]?></a></li>
+        <li class="<?php echo $CURRENT_PAGE == $link["text"] ? "active" : ""?>"><a href="<?=$link["href"]?>"><?=$link["text"]?></a></li>
 <?php endforeach ?>
       </ul>
     </div>
