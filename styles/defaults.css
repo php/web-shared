@@ -18,6 +18,9 @@
  */
 
 /* {{{ Base styles */
+
+@import url(http://fonts.googleapis.com/css?family=Ubuntu:700);
+
 html {
   font-size:100%;
 }
@@ -39,7 +42,6 @@ header {
   box-shadow: 0 .25em .25em rgba(0,0,0,.1);
   z-index: 1;
 }
-
 body footer {
   border-top: .25em solid #8892BF;
   background-color: #333;
@@ -50,6 +52,17 @@ nav {
 }
 nav a.home {
   margin-right:1.5rem;
+  font-size: 25.5px;
+  font-family: 'Ubuntu';
+  text-shadow: none;
+  color: black !important;
+  letter-spacing: -0.5px;
+}
+nav a.home .subdomain {
+  opacity: 0.9;
+}
+nav a.home img {
+  opacity: 0.75;
 }
 nav img {
   vertical-align: middle;
@@ -285,6 +298,7 @@ th {
   /* This just has to be big enough to cover whatever's in nav. */
   max-height: 50em;
 }
+
 @media (max-width:40rem) {
   #mainmenu-toggle-overlay {
     background: #4F5B93 url(//php.net/images/mobile-menu.png) no-repeat center center;
