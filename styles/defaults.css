@@ -17,6 +17,18 @@
  * on its own line (rather then inline-block, as is the default).
  */
 
+:root {
+  --font-family-sans-serif: "Fira Sans", "Source Sans Pro", ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+  --font-family-mono: "Fira Mono", "Source Code Pro", ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
+  --dark-grey-color: #333;
+  --dark-blue-color: #4F5B93;
+  --medium-blue-color: #7A86B8;
+  --light-blue-color: #E2E4EF;
+  --dark-magenta-color: #793862;
+  --medium-magenta-color: #AE508D;
+  --light-magenta-color: #CF82B1;
+}
+
 /* {{{ Base styles */
 html {
   font-size:100%;
@@ -70,6 +82,15 @@ body header nav a:visited {
   color: #E2E4EF;
   text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.25);
   text-decoration: none;
+}
+header nav li.active > a {
+  box-shadow: inset 0 3px 8px rgba(0, 0, 0, 0.125);
+}
+header nav li.active > a,
+header nav li.active > a:hover,
+header nav li.active > a:focus {
+  color: #fff;
+  background-color: var(--dark-blue-color);
 }
 header nav ul a {
   padding: 0 0.75em;
