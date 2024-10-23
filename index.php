@@ -36,11 +36,11 @@ $CURRENT_PAGE = 'Current';
 $lipsum = <<<LIPSUM
 Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
 tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim
-veniam, quis nostrud exercitation ullamco laboris nisi ut a liquip ex ea
+veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea
 commodo consequat. Duis aute irure dolor in reprehenderit in voluptate
-velit esse cillu m dolore eu fugiat nulla pariatur. Excepteur sint
-occaecat cupidatat non proident, sunt in culpa qui officia deserunt
-mollit anim id est laborum.
+velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat
+cupidatat non proident, sunt in culpa qui officia deserunt mollit anim
+id est laborum.
 LIPSUM;
 
 $short_lipsum = implode('', array_slice(preg_split('/([.\?!])/', $lipsum, -1, PREG_SPLIT_NO_EMPTY | PREG_SPLIT_DELIM_CAPTURE), 0, 6));
@@ -177,7 +177,7 @@ require_once 'templates/header.inc';
     </tbody>
     <tfoot>
       <tr>
-        <td colspan="4">Table footer</td>
+        <th colspan="4">Table footer</th>
       </tr>
     </tfoot>
   </table>
