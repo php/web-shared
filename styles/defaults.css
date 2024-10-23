@@ -110,9 +110,7 @@ h1, h2, h3, h4, h5, h6, dt {
   font-family: "Source Sans Pro", Helvetica, Arial, sans-serif !important;
   font-weight: bolder;
   color: #333;
-  background: #E2E4EF;
   padding: .375em .5em;
-  border-top: 2px solid #4F5B93;
   border-bottom: 1px solid #C4C9DF;
   border-radius: 0 0 2px 2px;
   line-height: 1.5rem;
@@ -120,9 +118,12 @@ h1, h2, h3, h4, h5, h6, dt {
 }
 h1 {
   font-size: 1.5rem;
+  background: #E2E4EF;
+  border-top: 2px solid #4F5B93;
 }
 h2 {
   font-size: 1.25rem;
+  background: #E2E4EF;
 }
 h3, dt {
   font-size: 1.125rem;
@@ -141,6 +142,7 @@ dd {
 }
 p {
   margin: 0 0 1.5rem;
+  padding: 0 0.5em;
 }
 ul, ol {
   margin: 0 0 1.5rem;
