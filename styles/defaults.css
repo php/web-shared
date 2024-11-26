@@ -165,9 +165,15 @@ p {
   margin: 0 0 1.5rem;
   padding: 0 0.5em;
 }
+pre {
+  padding: 0 0.5em;
+}
 ul, ol {
   margin: 0 0 1.5rem;
   padding:0 0 0 2.5rem;
+}
+li > ul, li > ol {
+  margin: 0;
 }
 .clearfix:before,
 .clearfix:after {
@@ -237,7 +243,7 @@ section.fullscreen .current:before {
   border: 1px solid #eecdde;
 
   padding: 1em;
-  margin: 0px;
+  margin: 0 0 1.5rem;
 
   text-align: center;
   font-weight: bold;
@@ -250,6 +256,12 @@ section.fullscreen .current:before {
 table {
   border-spacing: 0;
   width: 100%;
+  margin: 0 0 1.5rem;
+}
+table caption {
+  font-size: larger;
+  font-weight: bold;
+  margin-bottom: 0.5em;
 }
 tbody tr:nth-child(odd) {
   background-color: #bbd;
@@ -397,6 +409,9 @@ th {
     background: #e6e6e6;
     border: 1px solid #ccc;
     border-radius: 2px;
+  }
+  .secondscreen p {
+    padding: 0.75em 0 0 0.75em;
   }
   .secondscreen > nav {
     background-color: #e6e6e6;
