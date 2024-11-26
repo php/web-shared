@@ -131,9 +131,7 @@ h1, h2, h3, h4, h5, h6, dt {
   font-family: var(--font-family-sans-serif);
   font-weight: bolder;
   color: var(--dark-grey-color);
-  background: var(--light-blue-color);
   padding: .375em .5em;
-  border-top: 2px solid var(--dark-blue-color);
   border-bottom: 1px solid var(--medium-blue-color);
   border-radius: 0 0 2px 2px;
   line-height: 1.5rem;
@@ -141,9 +139,12 @@ h1, h2, h3, h4, h5, h6, dt {
 }
 h1 {
   font-size: 1.5rem;
+  background: var(--light-blue-color);
+  border-top: 2px solid var(--dark-blue-color);
 }
 h2 {
   font-size: 1.25rem;
+  background: var(--light-blue-color);
 }
 h3, dt {
   font-size: 1.125rem;
@@ -162,6 +163,7 @@ dd {
 }
 p {
   margin: 0 0 1.5rem;
+  padding: 0 0.5em;
 }
 ul, ol {
   margin: 0 0 1.5rem;
