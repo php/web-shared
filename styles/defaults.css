@@ -17,13 +17,25 @@
  * on its own line (rather then inline-block, as is the default).
  */
 
+:root {
+  --font-family-sans-serif: "Fira Sans", "Source Sans Pro", ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+  --font-family-mono: "Fira Mono", "Source Code Pro", ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
+  --dark-grey-color: #333;
+  --dark-blue-color: #4F5B93;
+  --medium-blue-color: #7A86B8;
+  --light-blue-color: #E2E4EF;
+  --dark-magenta-color: #793862;
+  --medium-magenta-color: #AE508D;
+  --light-magenta-color: #CF82B1;
+}
+
 /* {{{ Base styles */
 html {
   font-size:100%;
 }
 body {
-  color: #333;
-  font: normal 1rem/1.5 Tahoma, Arial, sans-serif, serif, monospace;
+  color: var(--dark-grey-color);
+  font: normal 1rem/1.5 var(--font-family-sans-serif);
   background-color: #C4C9DF;
   width: 100%;
   overflow-y: scroll;
@@ -34,15 +46,15 @@ body, header, section, footer {
 }
 header {
   width: 100%;
-  border-bottom: 0.25em solid #4F5B93;
-  background-color: #8892BF;
+  border-bottom: 0.25em solid var(--dark-blue-color);
+  background-color: var(--medium-blue-color);
   box-shadow: 0 .25em .25em rgba(0,0,0,.1);
   z-index: 1;
 }
 
 body footer {
-  border-top: .25em solid #8892BF;
-  background-color: #333;
+  border-top: .25em solid var(--dark-blue-color);
+  background-color: var(--dark-grey-color);
   width: 100%;
 }
 nav {
@@ -67,9 +79,18 @@ nav li {
 body header nav a:link,
 body header nav a:visited {
   display: inline-block;
-  color: #E2E4EF;
+  color: var(--light-blue-color);
   text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.25);
   text-decoration: none;
+}
+header nav li.active > a {
+  box-shadow: inset 0 3px 8px rgba(0, 0, 0, 0.125);
+}
+header nav li.active > a,
+header nav li.active > a:hover,
+header nav li.active > a:focus {
+  color: #fff;
+  background-color: var(--dark-blue-color);
 }
 header nav ul a {
   padding: 0 0.75em;
@@ -83,8 +104,8 @@ nav form {
 }
 nav input {
   width: 100%;
-  color: #333 !important;
-  font: normal 1rem/1.5 "Source Sans Pro", Helvetica, Arial, sans-serif !important;
+  color: var(--dark-grey-color) !important;
+  font: normal 1rem/1.5 var(--font-family-sans-serif) !important;
   text-shadow: 0 1px 0 #ffffff;
   border: 0;
   border-radius: 2px;
@@ -107,29 +128,29 @@ a:focus {
   color:#693;
 }
 h1, h2, h3, h4, h5, h6, dt {
-  font-family: "Source Sans Pro", Helvetica, Arial, sans-serif !important;
+  font-family: var(--font-family-sans-serif);
   font-weight: bolder;
-  color: #333;
+  color: var(--dark-grey-color);
   padding: .375em .5em;
-  border-bottom: 1px solid #C4C9DF;
+  border-bottom: 1px solid var(--medium-blue-color);
   border-radius: 0 0 2px 2px;
   line-height: 1.5rem;
   margin:0 0 1.5rem;
 }
 h1 {
   font-size: 1.5rem;
-  background: #E2E4EF;
-  border-top: 2px solid #4F5B93;
+  background: var(--light-blue-color);
+  border-top: 2px solid var(--dark-blue-color);
 }
 h2 {
   font-size: 1.25rem;
-  background: #E2E4EF;
+  background: var(--light-blue-color);
 }
 h3, dt {
   font-size: 1.125rem;
 }
 dl {
-  background-color: #333;
+  background-color: var(--dark-grey-color);
   opacity: 0.9;
   color: #fff;
 }
@@ -234,17 +255,17 @@ tbody tr:nth-child(odd) {
   background-color: #bbd;
 }
 tbody tr:nth-child(even) {
-  background-color: #E2E4EF;
+  background-color: var(--light-blue-color);
 }
 thead tr,
 tfoot tr {
 	background-color: #8892BF;
 }
 thead th {
-	border-bottom: 2px solid #4F5B93;
+	border-bottom: 2px solid var(--dark-blue-color);
 }
 tfoot th {
-	border-top: 2px solid #4F5B93;
+	border-top: 2px solid var(--dark-blue-color);
 }
 td,
 th {
@@ -256,7 +277,7 @@ th {
 /* {{{ Mega Drop Down */
 #megadropdown {
     display: none;
-    background-color: #333;
+    background-color: var(--dark-grey-color);
     height: 100%;
     width: 100%;
     opacity: 0.9;
@@ -289,7 +310,7 @@ th {
 }
 @media (max-width:40rem) {
   #mainmenu-toggle-overlay {
-    background: #4F5B93 url(//php.net/images/mobile-menu.png) no-repeat center center;
+    background: var(--dark-blue-color) url(//php.net/images/mobile-menu.png) no-repeat center center;
     float: right;
     display: block;
     height: 32px;
