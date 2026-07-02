@@ -35,7 +35,7 @@ function cycleHeaders(matches, forward) {
     }
 }
 Mousetrap.bind('up up down down left right left right b a enter', function() {
-    $(".home img").attr("src", "//php.net/images/php_konami.gif");
+    $(".home img").attr("src", "//www.php.net/images/php_konami.gif");
     $(window).scrollTop(0);
 });
 Mousetrap.bind("?", function() {
@@ -121,7 +121,7 @@ Mousetrap.bind("m i r r o r enter", function(e) {
 });
 Mousetrap.bind("l o g o enter", function(e) {
     var time = new Date().getTime();
-    $(".home img").attr("src", "//php.net/images/logo.php?refresh&time=" + time);
+    $(".home img").attr("src", "//www.php.net/images/logo.php?refresh&time=" + time);
     $(window).scrollTop(0);
 });
 

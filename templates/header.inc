@@ -53,7 +53,7 @@ endforeach
 ?>
 
   <link href="//fonts.googleapis.com/css?family=Fira+Sans|Source+Sans+Pro:300,400,600,400italic,600italic|Source+Code+Pro&amp;subset=latin,latin-ext" rel="stylesheet">
-  <link rel="shortcut icon" href="//php.net/favicon.ico">
+  <link rel="shortcut icon" href="//www.php.net/favicon.ico">
 <!--[if lt IE 9]>
   <script src="//shared.php.net/js/html5shiv.js"></script>
 <![endif]-->
@@ -67,7 +67,7 @@ endforeach
   <input type="checkbox" id="mainmenu-toggle">
   <nav class="fullscreen">
     <div class="mainscreen">
-      <a href="/" class="home"><img src="//php.net/images/logo.php?<?=$SUBDOMAIN?>" width="48" height="24" alt="php"><span class="subdomain"><?=$SUBDOMAIN?></span></a>
+      <a href="/" class="home"><img src="//www.php.net/images/logo.php?<?=$SUBDOMAIN?>" width="48" height="24" alt="php"><span class="subdomain"><?=$SUBDOMAIN?></span></a>
       <ul>
 <?php foreach($LINKS as $link): ?>
         <li class="<?php echo $CURRENT_PAGE == $link["text"] ? "active" : ""?>"><a href="<?=$link["href"]?>"><?=$link["text"]?></a></li>
