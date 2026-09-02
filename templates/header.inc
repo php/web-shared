@@ -20,6 +20,11 @@
  *                  "hidden"      => array(array("name" => "hidden-input-name", "value" => "hidden-input-value")),
  *                ); // Search box, if any
  *   $CURRENT_PAGE // The current page
+ *   $CONFIG    = array(
+ *                 "cache"         => 1234567890, // optional, timestamp for Last
+ *                 "cache_control" => 3600, // optional, seconds for Cache-Control
+ *                 "http_response_code" => 404, // optional, HTTP response code
+ *             );
  */
 isset($TITLE)     || $TITLE     = "Hypertext Preprocessor";
 isset($SUBDOMAIN) || $SUBDOMAIN = "";
@@ -29,8 +34,32 @@ isset($HEAD_RAND) || $HEAD_RAND = "";
 isset($CSS)       || $CSS       = array();
 isset($SEARCH)    || $SEARCH    = array();
 isset($CURRENT_PAGE)    || $CURRENT_PAGE   = "";
+isset($CONFIG)    || $CONFIG   = array();
 $ROOT = substr($_SERVER["SERVER_NAME"], -8) == ".php.net" ? "//shared.php.net" : "/shared";
 $current_time = time();
+
+if (isset($CONFIG["cache"])) {
+  if (is_numeric($CONFIG["cache"])) {
+    $timestamp = $CONFIG["cache"];
+  } else {
+    $timestamp = $current_time;
+  }
+  $tsstring = gmdate("D, d M Y H:i:s ", $timestamp) . "GMT";
+
+  if (isset($_SERVER["HTTP_IF_MODIFIED_SINCE"]) && $_SERVER["HTTP_IF_MODIFIED_SINCE"] == $tsstring) {
+    header("HTTP/1.1 304 Not Modified");
+    exit;
+  }
+  header("Last-Modified: " . $tsstring);
+}
+
+if (isset($CONFIG["cache_control"]) && is_numeric($CONFIG["cache_control"])) {
+  header("Cache-Control: public, max-age=" . (int) $CONFIG["cache_control"]);
+}
+
+if (isset($CONFIG['http_response_code'])) {
+  http_response_code($CONFIG['http_response_code']);
+}
 ?>
 <!DOCTYPE html>
 <html>
