@@ -271,6 +271,7 @@ body footer {
   margin: 0;
   list-style: none;
   font-size: 0.875em;
+  height: 2.5em;
 }
 #dokuwiki__pagetools ul li a {
   display: block;
