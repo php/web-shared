@@ -233,24 +233,16 @@ body footer {
   right: auto;
   left: 40px;
 }
-#dokuwiki__site > .site {
-  padding-right: 2.75rem;
-  padding-left: 2.75rem;
-}
-.dokuwiki div.page {
-  height: 14.5rem;
-  min-height: 14.5rem;
-  height: auto;
-}
 #dokuwiki__pagetools {
   position: absolute;
-  right: -2.75rem;
-  top: 2em;
-  width: 2.75rem;
+  right: -44px;
+  /* on same vertical level as first headline, because .page has 2em padding */
+  top: 0;
+  width: 40px;
 }
 #dokuwiki__pagetools div.tools {
   position: fixed;
-  width: 2.75rem;
+  width: 40px;
 }
 #dokuwiki__pagetools div.tools ul {
   position: absolute;
@@ -258,6 +250,7 @@ body footer {
   text-align: right;
   margin: 0;
   padding: 0;
+  /* add transparent border to prevent jumping when proper border is added on hover */
   border: 1px solid transparent;
   z-index: 10;
 }
@@ -269,11 +262,12 @@ body footer {
 }
 #dokuwiki__pagetools div.tools ul li a {
   display: block;
+  /* add transparent border to prevent jumping when proper border is added on focus */
   border: 1px solid transparent;
   white-space: nowrap;
-  line-height: 2.25rem;
+  line-height: 20px;
   vertical-align: middle;
-  height: 2.25rem;
+  height: 30px;
   background-color: #fff;
 }
 #dokuwiki__pagetools div.tools ul li a span {
@@ -304,7 +298,7 @@ body footer {
   text-align: left;
 }
 #dokuwiki__pagetools:hover div.tools ul, #dokuwiki__pagetools:focus-within div.tools ul {
-  background-color: ;
+  background-color: #fff;
   border-color: #369;
   border-radius: 2px;
   box-shadow: 2px 2px 2px ;
@@ -312,7 +306,6 @@ body footer {
 #dokuwiki__pagetools:hover div.tools ul li a span, #dokuwiki__pagetools:focus-within div.tools ul li a span {
   display: inline-block;
 }
- 
 /**
  * This file provides styles for the Administration overview
  * (?do=admin).
